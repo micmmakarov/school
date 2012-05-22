@@ -5,7 +5,7 @@
     <div class="nine columns">
       <h3><%= @course.title %></h3>
       <h6><%= @course.description %></h6>
-      <p><%= @course.text %></p>
+      <p><%= @course.text.gsub(/\n/,"<br>").html_safe %></p>
     </div>
     <div class="three columns">
       <%= link_to 'Edit', edit_course_path(@course), :class=> "small black radius button" %>
