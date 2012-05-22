@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c58e55c7-c39d-41e6-9995-2d534785f3d0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/courses/_lessons.html.erb" afterPath="$PROJECT_DIR$/app/views/courses/_lessons.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/_courses.html.erb" afterPath="$PROJECT_DIR$/app/views/home/_courses.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/_slider.html.erb" afterPath="$PROJECT_DIR$/app/views/home/_slider.html.erb" />
     </list>
     <ignored path="school.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -88,10 +87,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_lessons.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_lessons.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/courses/_lessons.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="6" selection-start="81" selection-end="81" vertical-scroll-proportion="0.17870036">
+            <state line="3" column="6" selection-start="81" selection-end="81" vertical-scroll-proportion="-2.357143">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_slider.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/home/_slider.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="54" selection-start="1040" selection-end="1040" vertical-scroll-proportion="0.8212996">
               <folding />
             </state>
           </provider>
@@ -101,15 +109,6 @@
         <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="2" column="54" selection-start="78" selection-end="111" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/devise/sessions/new.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="20" selection-start="37" selection-end="37" vertical-scroll-proportion="3.3095238">
               <folding />
             </state>
           </provider>
@@ -130,7 +129,6 @@
       <list>
         <option value="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/home/_slider.html.erb" />
         <option value="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/posts/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/home/_header.html.erb" />
@@ -144,6 +142,7 @@
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
         <option value="$PROJECT_DIR$/app/views/home/_courses.html.erb" />
         <option value="$PROJECT_DIR$/app/views/courses/_lessons.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/home/_slider.html.erb" />
       </list>
     </option>
   </component>
@@ -737,13 +736,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/home/_header.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="867" selection-end="867" vertical-scroll-proportion="-18.071428">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="23" selection-start="147" selection-end="147" vertical-scroll-proportion="0.0">
@@ -844,7 +836,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/courses/_lessons.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="6" selection-start="81" selection-end="81" vertical-scroll-proportion="0.17870036">
+        <state line="3" column="6" selection-start="81" selection-end="81" vertical-scroll-proportion="-2.357143">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/_slider.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="54" selection-start="1040" selection-end="1040" vertical-scroll-proportion="0.8212996">
           <folding />
         </state>
       </provider>
