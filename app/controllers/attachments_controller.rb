@@ -1,4 +1,7 @@
 class AttachmentsController < ApplicationController
+
+  before_filter :authenticate_user!, :only => [:new, :edit, :destroy, :update]
+
   # GET /attachments
   # GET /attachments.json
   def index

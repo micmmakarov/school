@@ -1,4 +1,7 @@
 class HomeworksController < ApplicationController
+
+  before_filter :authenticate_user!, :only => [:new, :edit, :destroy, :update]
+
   # GET /homeworks
   # GET /homeworks.json
   def index

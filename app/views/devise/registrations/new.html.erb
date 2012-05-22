@@ -1,21 +1,23 @@
 <h2>Sign up</h2>
-
+<p>Hello User! Please sign up to participate in Rails Activity</p>
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-  <div><%= f.label :name %><br />
-  <%= f.text_field :name %></div>
+  <div>
+  <%= f.text_field :name, :placeholder => "you name" %></div>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
+  <div>
+  <%= f.email_field :email, :placeholder => "e-mail" %></div>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+  <div>
+  <%= f.password_field :password, :placeholder => "password" %></div>
 
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
-
-  <div><%= f.submit "Sign up" %></div>
+  <div>
+  <%= f.password_field :password_confirmation, :placeholder => "again password" %></div>
+  <br>
+    <div><%= f.check_box :subscribe %> I want to subscribe to news and updates :) </div>
+  <br>
+  <div><%= f.submit "Sign up", :class => "large blue nice radius button" %></div>
 <% end %>
 
 <%= render "links" %>

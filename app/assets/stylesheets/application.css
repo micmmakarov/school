@@ -120,3 +120,11 @@ body form textarea {
 body form input {
     font-size:26px;
 }
+
+#login {
+    /*margin-left:-120px;*/
+}
+.header li div {
+    margin-top:15px;
+    font-size:14px;
+}

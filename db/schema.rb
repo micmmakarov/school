@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120522162812) do
+ActiveRecord::Schema.define(:version => 20120522180449) do
 
   create_table "attachments", :force => true do |t|
     t.integer  "post_id"
@@ -83,6 +83,7 @@ ActiveRecord::Schema.define(:version => 20120522162812) do
     t.string   "pic_content_type"
     t.integer  "pic_file_size"
     t.datetime "pic_updated_at"
+    t.boolean  "subscribe"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

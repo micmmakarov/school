@@ -1,4 +1,5 @@
 class CoursesController < ApplicationController
+  before_filter :authenticate_user!, :only => [:new, :edit, :destroy, :update]
   # GET /courses
   # GET /courses.json
   def index

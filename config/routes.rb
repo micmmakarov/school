@@ -6,6 +6,7 @@ School::Application.routes.draw do
   resources :homeworks
 
   get "home/index"
+  get "about" => "home#about"
 
   resources :lessons
 

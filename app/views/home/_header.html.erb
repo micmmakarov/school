@@ -15,8 +15,12 @@
                 <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
               </li>
           <% else %>
-              <li><a class="login-button" data-reveal-id="login" href="#">Login</a></li>
+              <li><a class="login-button" data-reveal-id="login" href="#"><i class="icon-user icon-white" style="margin-top:3px;"></i> Login</a></li>
         <% end %>
+
+          <% if user_signed_in? %>
+              <li><div><i class="icon-user"></i> <%= current_user.name %></div></li>
+          <% end %>
 
         </ul>
     </div>
@@ -27,7 +31,7 @@
 
 
 
-<div id=login class="reveal-modal" style="margin-left:-120px;width:240px;">
+<div id=login class="reveal-modal" style="width:240px;">
 <%= render "home/signin" %>
   <a class="close-reveal-modal">&#215;</a>
 </div>

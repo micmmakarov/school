@@ -1,17 +1,17 @@
 <h2>Sign in</h2>
-
+<p>Sign in please :)</p>
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
-
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
-
+  <div>
+  <%= f.email_field :email, :placeholder => "email" %></div>
+    <br />
+  <div>
+  <%= f.password_field :password, :placeholder => "password" %></div>
+    <br />
   <% if devise_mapping.rememberable? -%>
-    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+    <div><%= f.check_box :remember_me, :style => "display:inline-block;" %> <%= f.label :remember_me, :style => "display:inline-block;" %></div>
   <% end -%>
-
-  <div><%= f.submit "Sign in" %></div>
+    <br />
+  <div><%= f.submit "Sign in", :class => "large nice blue button" %></div>
 <% end %>
 
 <%= render "links" %>
