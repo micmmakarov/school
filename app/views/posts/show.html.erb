@@ -13,7 +13,7 @@
 
 
 <p>
-  <%= @post.content %>
+  <%= @post.content.gsub(/\n/,"<br>").html_safe %>
 </p>
 
 
