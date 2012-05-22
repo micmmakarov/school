@@ -128,3 +128,6 @@ body form input {
     margin-top:15px;
     font-size:14px;
 }
+.reveal-modal {
+    background:white;
+}
