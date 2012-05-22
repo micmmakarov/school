@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+
+<% @post.attachments.each do |attachment| %>
+    <%= image_tag(attachment.pic.url(:medium), :class => 'big-img') %>
+<% end %>
+
+<h3><%= @post.title %></h3>
+
+<p>
+  <b>By </b> <%= @post.user.name %>
+</p>
+
+
+<p>
+  <%= @post.content %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_post_path(@post), :class=> "small black radius button"  %>
+<!--<%= link_to 'Back', posts_path %>-->

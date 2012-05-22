@@ -1,2 +1,5 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<h4>Welcome to Rails School San Francisco</h4>
+<%= render :partial => "home/courses", :locals => {:courses => @courses} %>
+<br>
+<%= render :partial => "home/blog", :locals => {:posts => @posts} %>
+<br>

@@ -1,4 +1,8 @@
 School::Application.routes.draw do
+  resources :attachments
+
+  resources :posts
+
   resources :homeworks
 
   get "home/index"

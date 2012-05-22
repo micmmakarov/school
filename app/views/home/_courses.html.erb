@@ -1,0 +1,12 @@
+<h3>Courses</h3>
+
+<% courses.each do |c| %>
+<div>
+  <h5><%= link_to c.title, c %></h5>
+  <strong><%= c.description %></strong>
+  <%= c.text %>
+
+</div>
+
+
+<% end %>

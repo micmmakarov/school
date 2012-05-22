@@ -1,0 +1,17 @@
+<div class=row>
+  <div class="three columns">
+    <% post.attachments.each do |attachment| %>
+        <%= image_tag(attachment.pic.url(:thumb), :class => 'big-img') %>
+    <% end %>
+  </div>
+  <div class="nine columns">
+
+  <h5><%= post.title %></h5>
+    <%= post.created_at %>, <%= post.user.name %>
+
+    <p>
+      <%= post.content[0..400] %>... <%= link_to "Read more...", post %>
+    </p>
+
+    </div>
+</div>
