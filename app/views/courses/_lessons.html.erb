@@ -1,0 +1,17 @@
+<div class="lesson-list row">
+
+  List of lessons for this course:
+<div class=row>
+<% course.lessons.each do |l| %>
+    <div class="four columns">
+      <div class="single-lesson panel">
+          <h5><%= l.title %></h5><h6><%= l.description %></h6>
+          <span class="blue label"><%= l.time.strftime("%B %d, %Y") %></span> <%= l.time.strftime("%I:%M%p") %>, <%= l.address %>
+           <p class="small-text"><%= l.text[0..100] %>... <span class="has-tip" data-width="310" title="<%= l.text %>">Read more...</span></p>
+      </div>
+    </div>
+<% end %>
+
+</div>
+
+</div>

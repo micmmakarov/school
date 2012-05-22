@@ -1,0 +1,26 @@
+<p id="notice" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"><%= notice %></p>
+
+<div class=panel>
+  <div class=row>
+    <div class="nine columns">
+      <h3><%= @course.title %></h3>
+      <h6><%= @course.description %></h6>
+      <p><%= @course.text %></p>
+    </div>
+    <div class="three columns">
+      <%= link_to 'Edit', edit_course_path(@course), :class=> "small black radius button" %>
+    </div>
+  </div>
+</div>
+
+<%= render :partial => "lessons", :locals => {:course => @course} %>
+
+<a href="#" class="green radius button" data-reveal-id="add-lesson"><i class="icon-plus-sign icon-white"></i> Add a lesson</a>
+
+<div id="add-lesson" class="reveal-modal">
+  <%= render :partial => "lessons/add", :locals => {:lesson => @course.lessons.build} %>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
+
+
+<!-- <%= link_to 'Back', courses_path %> -->

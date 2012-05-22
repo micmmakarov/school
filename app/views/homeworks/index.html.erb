@@ -1,0 +1,27 @@
+<h1>Listing homeworks</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Lesson</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @homeworks.each do |homework| %>
+  <tr>
+    <td><%= homework.title %></td>
+    <td><%= homework.description %></td>
+    <td><%= homework.lesson_id %></td>
+    <td><%= link_to 'Show', homework %></td>
+    <td><%= link_to 'Edit', edit_homework_path(homework) %></td>
+    <td><%= link_to 'Destroy', homework, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Homework', new_homework_path %>

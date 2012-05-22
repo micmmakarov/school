@@ -1,0 +1,51 @@
+<h2>Add new lesson</h2>
+<div class="add-lesson row">
+    <div class="six columns">
+        <%= form_for(lesson, :remote => true, :html => {:class=>"nice"}) do |f| %>
+            <% if lesson.errors.any? %>
+                <div id="error_explanation">
+                  <h2><%= pluralize(lesson.errors.count, "error") %> prohibited this lesson from being saved:</h2>
+
+                  <ul>
+                    <% lesson.errors.full_messages.each do |msg| %>
+                        <li><%= msg %></li>
+                    <% end %>
+                  </ul>
+                </div>
+            <% end %>
+
+              <%= f.hidden_field :course_id %>
+
+              <div class="field">
+              <%= f.label :title %><br />
+              <%= f.text_field :title, :class=>"input-text" %>
+            </div>
+            <div class="field">
+              <%= f.label :description %><br />
+              <%= f.text_field :description, :class=>"input-text" %>
+            </div>
+            <div class="time-field">
+            <%= f.label :time %><br />
+            <%= f.datetime_select :time %>
+            <div style="clear:both;"></div>
+            </div>
+
+            <div class="field">
+            <%= f.label :address %><br />
+            <%= f.text_field :address, :class=>"input-text" %>
+            </div>
+    </div>
+    <div class="six columns">
+        <div class="field">
+          <%= f.label :text %><br />
+          <%= f.text_area :text %>
+        </div>
+    </div>
+
+</div>
+<div class=row>
+  <div class="actions">
+    <%= f.submit :style => "width:100%", :class => "nice blue big button radius" %>
+  </div>
+      <% end %>
+</div>

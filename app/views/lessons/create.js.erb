@@ -1,0 +1,1 @@
+$(".lesson-list").replaceWith("<%= escape_javascript(render :partial => "courses/lessons", :locals => {:course => @lesson.course}) %>");

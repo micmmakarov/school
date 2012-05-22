@@ -1,0 +1,103 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require foundation
+ *= require_tree .
+*/
+
+
+.footer {
+    background: black;
+    color:white;
+    min-height:200px;
+}
+.body {
+    min-height:500px;
+}
+body {
+   /* background:url(bg.png) !important;*/
+
+}
+.add-lesson {
+    background:rgba(255,255,255,0.5);
+}
+
+.time-field select {
+    display:inline-block;
+}
+.login-form input[type=email], .login-form input[type=password] {
+font-size:30px !important;
+}
+.login-form input[type=submit] {
+width:100%;
+}
+.login-form label {
+display:inline-block;
+}
+.single-lesson {
+height:150px;
+}
+.small-text {
+    font-size:11px;
+}
+.header {
+    margin-bottom:20px;
+}
+.header .row:first-child {
+    border-bottom:4px solid #d30000;
+    padding-top:15px;
+
+}
+.header .logo {
+    color:#d30000;
+}
+.slide {
+    height:200px;
+    overflow:hidden;
+}
+
+.menu li a {
+    display:block;
+    margin-top:15px;
+    color:#d30000;
+    font-size:16px;
+}
+.menu li a:hover {
+color:red;
+}
+.menu li {
+    float:left;
+    padding-left: 15px;
+}
+.menu {
+    float:right;
+    margin-bottom:0px;
+}
+.login-button {
+    background-color:#d30000;
+    border-radius:10px;
+    color:white !important;
+    padding: 5px;
+    margin-top:10px !important;
+    display:block;
+}
+.login-button:hover {
+    background-color:#ee0000;
+}
+
+
+/* footer */
+.footer .row:first-child {
+    padding-top:30px;
+}
+.footer .ruby-logo {
+    float:right;
+}
