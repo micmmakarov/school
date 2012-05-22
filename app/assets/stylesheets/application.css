@@ -131,3 +131,24 @@ body form input {
 .reveal-modal {
     background:white;
 }
+
+.i1-img {
+    width:100%;
+    height:200px;
+    position:absolute;
+}
+.i2-img {
+    width:100%;
+    height:200px;
+    position:absolute;
+}
+.i3-img {
+    width:100%;
+    height:200px;
+    position:absolute;
+}
+.img-wrap {
+    width:100%;
+    height:200px;
+    position:relative;
+}

@@ -3,6 +3,9 @@
     <div id="slide-show">
 
         <div style="background:url(/assets/banner0.png);" alt="Overflow: Hidden No More" />
+        <div class=img-wrap>
+        <div class="i1-img">
+            </div>
             <div class=row>
               <div class="six columns">
               </div>
@@ -10,9 +13,12 @@
                 <h1 style="color:white;text-shadow:2px 2px 0px red;">Wellcome to the Rails School<br>San Francisco</h1>
               </div>
             </div>
+          </div>
         </div>
         <div style="background:url(/assets/banner3.png);" alt="Overflow: Hidden No More" />
-          <div class=row>
+  <div class="i2-img">
+  </div>
+            <div class=row>
             <div class="six columns">
             </div>
             <div class="six columns phone-four">
@@ -22,9 +28,13 @@
               <h4 style="color:white;text-shadow:2px 2px 0px red;">If you want to migrate to Rails<br>Take your chance</h4>
             </div>
           </div>
+
+
+
         </div>
         <div style="background:url(/assets/banner4.png);" alt="Overflow: Hidden No More" />
-
+<div class="i3-img">
+</div>
             <div class=row>
               <div class="six columns">
               </div>
@@ -61,6 +71,11 @@
             bulletThumbLocation: '',		 // location from this file where thumbs will be
             fluid: true                         // or set a aspect ratio for content slides (ex: '4x3')
         });
+
+        var n = setTimeout("$('.i1-img').css('background','url(/assets/banner0.jpg)'); $('.i1-img').fadeIn(15000); ",  0);
+        var n = setTimeout("$('.i2-img').css('background','url(/assets/banner3.jpg)'); $('.i2-img').fadeIn(15000); ",  3000);
+        var n = setTimeout("$('.i3-img').css('background','url(/assets/banner4.jpg)'); $('.i3-img').fadeIn(15000); ",  6000);
+
     });
 </script>
 
