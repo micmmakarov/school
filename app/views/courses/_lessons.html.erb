@@ -1,15 +1,15 @@
 <div class="lesson-list row">
 
-  List of lessons for this course:
+  <h4>List of lessons for this course:</h4>
+  <br>
 <div class=row>
-<% course.lessons.each do |l| %>
-    <div class="four columns">
-      <div class="single-lesson panel">
+<% course.lessons.all(:order => "created_at DESC").each do |l| %>
+      <div>
           <h5><%= l.title %></h5><h6><%= l.description %></h6>
           <span class="blue label"><%= l.time.strftime("%B %d, %Y") %></span> <%= l.time.strftime("%I:%M%p") %>, <%= l.address %>
            <p class="small-text"><%= l.text[0..100] %>... <span class="has-tip" data-width="310" title="<%= l.text %>">Read more...</span></p>
+        <hr/>
       </div>
-    </div>
 <% end %>
 
 </div>
