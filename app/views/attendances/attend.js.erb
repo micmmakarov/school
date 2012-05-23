@@ -1,0 +1,2 @@
+$(".attend_<%= @lesson.id %>").replaceWith("<%= escape_javascript(render :partial => "attendances/attend", :locals => {:lesson => @lesson}) %>")
+$(".sidebar").html("<%= escape_javascript(render :partial => "home/sidebar", :locals => {:lesson => @lesson}) %>")

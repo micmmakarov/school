@@ -1,5 +1,6 @@
 <h4>Welcome to Rails School San Francisco</h4>
+<br>
 <%= render :partial => "home/courses", :locals => {:courses => @courses} %>
 <br>
-<%= render :partial => "home/blog", :locals => {:posts => @posts} %>
+<%= render :partial => "home/feed-inline", :locals => {:posts => @posts} %>
 <br>

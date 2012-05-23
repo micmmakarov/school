@@ -9,6 +9,7 @@ gem 'rails', '3.2.3'
 group :development do
   gem 'sqlite3'
 end
+
 gem "zurb-foundation"
 
 gem "paperclip"

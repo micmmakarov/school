@@ -25,4 +25,19 @@ class User < ActiveRecord::Base
  #     :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
  # }
 
+  def attend!(lesson)
+    if attending?(lesson)
+       self.attendances.find_by_lesson_id(lesson.id).destroy
+    else
+       self.attendances.create!(:lesson_id => lesson.id)
+    end
+  end
+
+  def attending?(lesson)
+    if self.attendances.find_by_lesson_id(lesson.id)
+      "Attending"
+    end
+  end
+
+
 end

@@ -1,0 +1,30 @@
+<% if user_signed_in?  %>
+
+    <div class="attend_<%= lesson.id %>">
+
+      <% if Date.today <= lesson.time.to_date %>
+          
+          <%	url= "/attend/" +  lesson.id.to_s	%>
+        <%= form_for(lesson, :url => url,
+                       html: { method: :post, class: '' },
+                       remote: true) do |f| %>
+              <% if current_user.attending?(lesson) then %>
+                  <%= f.submit "Cancel", class: "button white nice small" %>
+              <% else %>
+                  <%= f.submit "WILL ATTEND", class: "button nice small" %>
+              <% end %>
+          <% end %>
+        
+       <% else %>
+
+          <% if current_user.attending?(lesson) then %>
+            You attended this lesson
+          <% else %>
+              You haven't attended this lesson
+        <% end %>
+      
+       <% end %>
+
+    </div>
+
+<% end %>

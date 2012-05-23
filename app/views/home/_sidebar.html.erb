@@ -1,1 +1,17 @@
-Sidebar
+<% if user_signed_in? %>
+
+    <h5>My lessons:</h5>
+
+    <% current_user.lessons.all(:order => "created_at DESC").each do |l| %>
+        <% if Date.today > l.time.to_date %>
+            <% attended = "black label" %>
+        <% else %>
+            <% attended = "blue label" %>
+        <% end %>
+        <span class="<%= attended %>"><%= l.time.strftime("%d %B") %></span>
+        <%= l.title %>
+        <hr/>
+        
+    <% end %>
+    
+<% end %>

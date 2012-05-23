@@ -2,16 +2,29 @@
 
   <h4>List of lessons for this course:</h4>
   <br>
-<div class=row>
+
 <% course.lessons.all(:order => "created_at DESC").each do |l| %>
-      <div>
+      <div class=row>
+        <div class="two columns phone-one">
+
+  <% if Date.today > l.time.to_date %>
+              <h5><%= l.time.strftime("%d %B") %></h5>
+        <% else %>
+              <h5 style="color:red"><%= l.time.strftime("%d %B") %></h5>
+        <% end %>
+          <h5 style="color:darkgray;"><%= l.time.strftime("%A") %><br></h5>
+          <h4><span class="blue label"><%= l.time.strftime("%I:%M%p") %></span></h4>
+        </div>
+        <div class="ten columns phone-three">
           <h5><%= l.title %></h5><h6><%= l.description %></h6>
-          <span class="blue label"><%= l.time.strftime("%B %d, %Y") %></span> <%= l.time.strftime("%I:%M%p") %>, <%= l.address %>
-           <p class="small-text"><%= l.text[0..100] %>... <span class="has-tip" data-width="310" title="<%= l.text %>">Read more...</span></p>
+          <%= l.address %>
+          <p class="small-text"><%= l.text[0..100] %>... <span class="has-tip" data-width="310" title="<%= l.text %>">Read more...</span></p>
+          <%= render :partial => "attendances/attend", :locals => {:lesson => l} %>
+        </div>
         <hr/>
       </div>
 <% end %>
 
-</div>
+
 
 </div>

@@ -12,10 +12,11 @@
 </p>
 
 
-<p>
+<h5>
   <%= @post.content.gsub(/\n/,"<br>").html_safe %>
-</p>
+</h5>
 
+<br>
 
 
 <%= link_to 'Edit', edit_post_path(@post), :class=> "small black radius button"  %>
