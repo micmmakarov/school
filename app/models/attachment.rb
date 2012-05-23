@@ -4,7 +4,7 @@ class Attachment < ActiveRecord::Base
   belongs_to :post
 
 
-  has_attached_file :pic, :styles => {:medium => "500x400#",:slide => "180x260#", :thumb => "150x100#" },
+  has_attached_file :pic, :styles => {:medium => "500x400#",:feed => "220x180#", :thumb => "150x100#" },
                     :storage => :s3,
                     :bucket => 'aweek1024',
                     :convert_options => { :thumb => "-quality 92" },

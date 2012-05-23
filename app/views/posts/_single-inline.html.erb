@@ -1,7 +1,7 @@
 
   <div class="four columns">
     <% post.attachments.each do |attachment| %>
-        <%= image_tag(attachment.pic.url(:thumb), :class => 'big-img') %>
+        <%= image_tag(attachment.pic.url(:feed), :class => 'big-img') %>
     <% end %>
 
   <h5><%= post.title %></h5>
