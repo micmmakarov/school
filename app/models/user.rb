@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
   attr_accessible :name, :subscribe
 
   has_many :posts
+  has_many :comments
   has_many :attendances
   has_many :lessons, :through => :attendances
 
@@ -39,5 +40,26 @@ class User < ActiveRecord::Base
     end
   end
 
+  def rated?(ddd)
+    a=self.ratings.where("#{ddd.class.to_s.downcase}_id" => ddd.id)
+    if a.present?
+      a[0].value
+    end
+  end
+
+  def rate!(ddd, value)
+    if value < 0
+      value=-1
+    else
+      value=1
+    end
+
+    self.ratings.create!("#{ddd.class.to_s.downcase}_id" => ddd.id, :value => value) if not rated?(ddd)
+
+    if ddd.class.to_s.downcase=="definition"
+      ddd.rating = ddd.rating.to_i + value
+      ddd.save!
+    end
+  end
 
 end

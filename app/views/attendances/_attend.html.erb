@@ -9,7 +9,7 @@
                        html: { method: :post, class: '' },
                        remote: true) do |f| %>
               <% if current_user.attending?(lesson) then %>
-                  <%= f.submit "Cancel", class: "button white nice small" %>
+                  You are attending this lesson <%= f.submit "Cancel", class: "button white nice small" %>
               <% else %>
                   <%= f.submit "WILL ATTEND", class: "button nice small" %>
               <% end %>

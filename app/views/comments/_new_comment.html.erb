@@ -1,0 +1,8 @@
+<%= form_for(comment.comments.build(user_id: current_user.id), remote: true) do |f| %>
+
+
+    <%= f.text_area :text, :placeholder => "your comment here" %>
+    <%= f.hidden_field :comment_id %>
+    <%= f.hidden_field :lesson_id %>
+    <%= f.submit :class=> "small black button" %>
+<% end %>

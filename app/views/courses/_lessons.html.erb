@@ -15,8 +15,10 @@
           <h5 style="color:darkgray;"><%= l.time.strftime("%A") %><br></h5>
           <h4><span class="blue label"><%= l.time.strftime("%I:%M%p") %></span></h4>
         </div>
+        
         <div class="ten columns phone-three">
-          <h5><%= l.title %></h5><h6><%= l.description %></h6>
+          <h5><%= link_to l.title, l %></h5>
+          <h6><%= l.description %></h6>
           <%= l.address %>
           <p class="small-text"><%= l.text[0..100] %>... <span class="has-tip" data-width="310" title="<%= l.text %>">Read more...</span></p>
           <%= render :partial => "attendances/attend", :locals => {:lesson => l} %>

@@ -1,19 +1,47 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Title:</b>
-  <%= @lesson.title %>
-</p>
 
-<p>
-  <b>Description:</b>
-  <%= @lesson.description %>
-</p>
+<div class=row>
 
-<p>
-  <b>Text:</b>
-  <%= @lesson.text %>
-</p>
+  <h4><%= link_to @lesson.course.title, @lesson.course %> / <%= @lesson.title %></h4>
+
+</div>
+
+<div class=panel>
+
+  <div class=row>
+    <div class="two columns phone-one">
+
+      <% if Date.today > @lesson.time.to_date %>
+          <h5><%= @lesson.time.strftime("%d %B") %></h5>
+      <% else %>
+          <h5 style="color:red"><%= @lesson.time.strftime("%d %B") %></h5>
+      <% end %>
+      <h5 style="color:darkgray;"><%= @lesson.time.strftime("%A") %><br></h5>
+      <h4><span class="blue label"><%= @lesson.time.strftime("%I:%M%p") %></span></h4>
+
+    </div>
+    <div class="ten columns phone-three">
+          <div class=row>
+            <div class="nine columns">
+              <h3><%= @lesson.title %></h3>
+            </div>
+            <div class="three columns">
+              <%= link_to 'Edit', edit_lesson_path(@lesson), :class=> "small black radius button" %>
+            </div>
+          </div>
+
+          <div class=row>
+            <h6><%= @lesson.description %></h6>
+            <p><%= @lesson.text.gsub(/\n/,"<br>").html_safe %></p>
+            <%= render :partial => "attendances/attend", :locals => {:lesson => @lesson} %>
+
+          </div>
+    </div>
+  </div>
+
+</div>
+
 
 <p>
   <b>Time:</b>
@@ -27,9 +55,25 @@
 
 <p>
   <b>Course:</b>
-  <%= @lesson.course_id %>
+
 </p>
 
+<% if @lesson.comments.present? %>
+    Comments
+    <div class="comments_to_lesson_<%= @lesson.id %>">
+    <%= render :partial => "comments/comments", :locals => {:comment => @lesson.comments.first} %>
+    </div>
+<% end %>
 
 <%= link_to 'Edit', edit_lesson_path(@lesson) %> |
 <%= link_to 'Back', lessons_path %>
+
+<script>
+$(document).ready(function () {
+    $(".add_comment").click(function (e) {
+        e.preventDefault();
+         comment_id = $(this).attr("data-id");
+         $(".add_comment_" + comment_id).toggle(1500);
+    });
+});
+</script>

@@ -1,0 +1,19 @@
+<div class="comments_to_<%= comment.id %>" style="margin-left:20px;">
+
+<h5><%= comment.text %></h5>
+By <i class="icon-user"></i><%= comment.user.name %>
+
+  <a href="#" class="add_comment" data-id="<%= comment.id %>">Add a comment</a>
+
+  <% comment.comments.each do |c| %>
+<div>
+  <%=  render :partial => "comments/comments", :locals => {:comment => c}%>
+  
+</div>
+<% end %>
+
+
+</div>
+<div class="add_comment_box add_comment_<%= comment.id %>">
+  <%= render :partial => "comments/new_comment", :locals => {:comment => comment} %>
+</div>

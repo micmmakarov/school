@@ -3,6 +3,7 @@ class Post < ActiveRecord::Base
 
   has_many :attachments, :dependent => :destroy
   belongs_to :user
+  has_many :ratings, :as => :ratable
 
   accepts_nested_attributes_for :attachments, :allow_destroy => true
 end

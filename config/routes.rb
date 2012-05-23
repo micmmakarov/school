@@ -1,4 +1,6 @@
 School::Application.routes.draw do
+  resources :comments
+
   resources :attachments
 
   resources :posts
