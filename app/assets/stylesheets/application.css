@@ -171,6 +171,11 @@ body form input {
     height:200px;
     position:absolute;
 }
+.i4-img {
+    width:100%;
+    height:200px;
+    position:absolute;
+}
 .img-wrap {
     width:100%;
     height:200px;
@@ -197,6 +202,15 @@ body form input {
     color: darkred;
     border-bottom: 1 dashed red;
 }
+.body a:hover {
+    color: white;
+    background:darkred;
+}
+.body a:active {
+    color: white;
+    background:red;
+}
+
 a.button {
     color:white;
 

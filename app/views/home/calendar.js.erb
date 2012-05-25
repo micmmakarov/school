@@ -1,1 +1,2 @@
 $(".calendar").replaceWith("<%= escape_javascript( render :partial => "home/calendar", :locals => {:year => @year, :month => @month} ) %>");
+$(".week").fadeIn(500);

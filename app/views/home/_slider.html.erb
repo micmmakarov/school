@@ -1,80 +1,100 @@
 <div class="slide row">
 
-    <div id="slide-show">
+  <div id="slide-show">
 
-        <div style="background:url(/assets/banner0.png);" alt="Overflow: Hidden No More" />
-        <div class=img-wrap>
-        <div class="i1-img">
-            </div>
-            <div class=row>
-              <div class="six columns">
-              </div>
-              <div class="six columns phone-four">
-                <h1 style="color:white;text-shadow:2px 2px 0px red;">Wellcome to the Rails School<br>San Francisco</h1>
-              </div>
-            </div>
-          </div>
+    <div style="background:url(/assets/banner0.png);" alt="Overflow: Hidden No More"/>
+    <div class=img-wrap>
+      <div class="i1-img">
+      </div>
+      <div class=row>
+        <div class="six columns">
         </div>
-        <div style="background:url(/assets/banner3.png);" alt="Overflow: Hidden No More" />
+        <div class="six columns phone-four">
+          <h1 style="color:white;text-shadow:2px 2px 0px red;">Wellcome to the Rails School<br>San Francisco</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="background:url(/assets/banner3.png);" alt="Overflow: Hidden No More"/>
   <div class="i2-img">
   </div>
-            <div class=row>
-            <div class="six columns">
-            </div>
-            <div class="six columns phone-four">
-              <br>
-              <h1 style="color:white;text-shadow:2px 2px 0px red;">Rails is awesome</h1>
-              <hr/>
-              <h4 style="color:white;text-shadow:2px 2px 0px red;">If you want to migrate to Rails<br>Take your chance</h4>
-            </div>
-          </div>
+  <div class=row>
+    <div class="six columns">
+    </div>
+    <div class="six columns phone-four">
+      <br>
+
+      <h1 style="color:white;text-shadow:2px 2px 0px red;">Rails is awesome</h1>
+      <hr/>
+      <h4 style="color:white;text-shadow:2px 2px 0px red;">If you want to migrate to Rails<br>Take your chance</h4>
+    </div>
+  </div>
 
 
-
-        </div>
-        <div style="background:url(/assets/banner4.png);" alt="Overflow: Hidden No More" />
+</div>
+<div style="background:url(/assets/banner4.png);" alt="Overflow: Hidden No More"/>
 <div class="i3-img">
 </div>
-            <div class=row>
-              <div class="six columns">
-              </div>
-              <div class="six columns phone-four">
-                <br>
-                <h1 style="color:white;text-shadow:2px 2px 0px red;">Rails is awesome</h1>
-                <hr/>
-                <h4 style="color:white;text-shadow:2px 2px 0px red;">If you want to migrate to Rails<br>Take your chance</h4>
-              </div>
-            </div>
+<div class=row>
+  <div class="six columns">
+  </div>
+  <div class="six columns phone-four">
+    <br>
+
+    <h1 style="color:white;text-shadow:2px 2px 0px red;">Rails is awesome</h1>
+    <hr/>
+    <h4 style="color:white;text-shadow:2px 2px 0px red;">If you want to migrate to Rails<br>Take your chance</h4>
+  </div>
+</div>
 
 
 </div>
 
-    </div>
+<div style="background:url(/assets/banner5.png);" alt="Overflow: Hidden No More"/>
+<div class="i4-img">
+</div>
+<div class=row>
+  <div class="six columns">
+  </div>
+  <div class="six columns phone-four">
+    <br>
+
+    <h1 style="color:white;text-shadow:2px 2px 0px red;">Rails is awesome</h1>
+    <hr/>
+    <h4 style="color:white;text-shadow:2px 2px 0px red;">If you want to migrate to Rails<br>Take your chance</h4>
+  </div>
+</div>
+
+
+</div>
+
+</div>
 
 <script type="text/javascript">
-    $(window).load(function() {
+    $(window).load(function () {
         $('#slide-show').orbit({
-            animation: 'horizontal-push',                  // fade, horizontal-slide, vertical-slide, horizontal-push
-            animationSpeed: 1800,                // how fast animtions are
-            timer: true, 			 // true or false to have the timer
-            resetTimerOnClick: false,           // true resets the timer instead of pausing slideshow progress
-            advanceSpeed: 4000, 		 // if timer is enabled, time between transitions
-            pauseOnHover: false, 		 // if you hover pauses the slider
-            startClockOnMouseOut: false, 	 // if clock should start on MouseOut
-            startClockOnMouseOutAfter: 1000, 	 // how long after MouseOut should the timer start again
-            directionalNav: true, 		 // manual advancing directional navs
-            captions: true, 			 // do you want captions?
-            captionAnimation: 'fade', 		 // fade, slideOpen, none
-            captionAnimationSpeed: 800, 	 // if so how quickly should they animate in
-            bullets: true,			 // true or false to activate the bullet navigation
-            bulletThumbs: false,		 // thumbnails for the bullets
-            bulletThumbLocation: '',		 // location from this file where thumbs will be
-            fluid: true                         // or set a aspect ratio for content slides (ex: '4x3')
+            animation:'horizontal-push', // fade, horizontal-slide, vertical-slide, horizontal-push
+            animationSpeed:1800, // how fast animtions are
+            timer:true, // true or false to have the timer
+            resetTimerOnClick:false, // true resets the timer instead of pausing slideshow progress
+            advanceSpeed:4000, // if timer is enabled, time between transitions
+            pauseOnHover:false, // if you hover pauses the slider
+            startClockOnMouseOut:false, // if clock should start on MouseOut
+            startClockOnMouseOutAfter:1000, // how long after MouseOut should the timer start again
+            directionalNav:true, // manual advancing directional navs
+            captions:true, // do you want captions?
+            captionAnimation:'fade', // fade, slideOpen, none
+            captionAnimationSpeed:800, // if so how quickly should they animate in
+            bullets:true, // true or false to activate the bullet navigation
+            bulletThumbs:false, // thumbnails for the bullets
+            bulletThumbLocation:'', // location from this file where thumbs will be
+            fluid:true                         // or set a aspect ratio for content slides (ex: '4x3')
         });
 
-        var n = setTimeout("$('.i1-img').css('background','url(/assets/banner0.jpg)'); $('.i1-img').fadeIn(15000); ",  0);
-        var n = setTimeout("$('.i2-img').css('background','url(/assets/banner3.jpg)'); $('.i2-img').fadeIn(15000); ",  3000);
-        var n = setTimeout("$('.i3-img').css('background','url(/assets/banner4.jpg)'); $('.i3-img').fadeIn(15000); ",  6000);
+        var n = setTimeout("$('.i1-img').css('background','url(/assets/banner0.jpg)'); $('.i1-img').fadeIn(15000); ", 0);
+        var n = setTimeout("$('.i2-img').css('background','url(/assets/banner3.jpg)'); $('.i2-img').fadeIn(15000); ", 3000);
+        var n = setTimeout("$('.i3-img').css('background','url(/assets/banner4.jpg)'); $('.i3-img').fadeIn(15000); ", 6000);
+        var n = setTimeout("$('.i4-img').css('background','url(/assets/banner5.jpg)'); $('.i4-img').fadeIn(15000); ", 8000);
 
     });
 </script>
