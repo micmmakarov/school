@@ -51,6 +51,7 @@ body p {
 }
 body {
    /* background:url(bg.png) !important;*/
+    background:url(/assets/bg.jpg) !important;
 
 }
 .add-lesson {
