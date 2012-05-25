@@ -1,4 +1,7 @@
 School::Application.routes.draw do
+
+  match "calendar/:year/:month/:direction" => "home#calendar"
+
   resources :comments
 
   resources :attachments

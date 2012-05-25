@@ -1,0 +1,96 @@
+
+
+<% day=0 %>
+
+<% startweekday = Date.civil(year,month,1).strftime("%u") %>
+<% lastday = Date.civil(year,month,-1).day %>
+<% startweekday = 0 if startweekday.to_i > 6 %>
+
+<div class=calendar>
+  <div class=row>
+
+    <div class="six columns phone-two">
+      <h3><%= Date.civil(year,month,1).strftime("%b_%Y").upcase  %></h3>
+    </div>
+
+    <div class="three columns phone-one">
+    <%= link_to "<i class='icon-chevron-left icon-white'></i>".html_safe, "/calendar/"+ year.to_s+"/" +   month.to_s + "/previous", remote:true, :class=> "small white button" %>
+    </div>
+
+    <div class="three columns phone-one">
+    <%= link_to "<i class='icon-chevron-right icon-white'></i>".html_safe, "/calendar/"+ year.to_s+"/" +   month.to_s + "/next", remote:true, :class=> "small white button" %>
+    </div>
+
+  </div>
+  <br>
+
+        <!-- day names -->
+        <div class="week row">
+          <% 7.times do |i| %>
+              <div class="day day-name">
+                  <% weekday = Date::DAYNAMES[i] %>
+                  <%= weekday[0..2].upcase %><br>
+              </div>
+          <% end %>
+        <div class=clear></div>
+      </div>
+
+
+  <% 5.times do |w| %>
+
+      <div class=week>
+
+        <% 7.times do |i| %>
+
+            <% if startweekday.to_i==i %>
+                <% day = 1  %>
+                <% startweekday = -1 %>
+            <% end %>
+
+            <% weekday = Date::DAYNAMES[i] %>
+            <div style="background:<%= cycle("#EEEEEE","#BBBBCC")%>;" class="day <%= weekday %>" data-day="<%= i %>">
+
+              <% if day != 0 %>
+                  <% if lessons_today(year,month,day) %>
+                      <% if day >= Date.today.day %>
+                          <div class=calendar-image-wrap>
+                            <img class=calendar-image src="/assets/red-queen.png"/>
+                          </div>
+                          <h3 class=with-piece><%= day %></h3>
+                      <% else %>
+                          <div class=calendar-image-wrap>
+                            <img class=calendar-image src="/assets/gray-queen.png"/>
+                          </div>
+                          <h3 class=with-piece><%= day %></h3>
+            <% end %>
+                  <% else %>
+                      <h3><%= day %></h3>
+                <% end %>
+
+                  
+
+
+
+
+                      <% day+=1 %>
+                      <% day = 0 if day > lastday.to_i %>
+
+
+            <% else %>
+                  <h3>&nbsp;</h3>
+
+
+            <% end %>
+
+            </div>
+
+
+        <% end %>
+
+        <div class=clear></div>
+
+      </div>
+
+  <% end %>
+</div>
+

@@ -1,3 +1,6 @@
+<%= render :partial => "home/calendar", :locals =>{:year => Date.today.year, :month => Date.today.month} %>
+<br>
+<br>
 
 <% if user_signed_in? %>
 
@@ -19,3 +22,4 @@
 Please register to attend classes<br>
 <a href="/users/sign_up" class="black radius button">Register</a>
 <% end %>
+
