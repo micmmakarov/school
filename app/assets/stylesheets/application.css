@@ -13,11 +13,30 @@
  *= require_tree .
 */
 
-body h2, body h3 {
-color:#d30000;
-}
-body {
+@font-face {
+    font-family: 'ospdin';
+    src: url('/fonts/OSP-DIN-webfont.eot');
+    src: url('/fonts/OSP-DIN-webfont.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/OSP-DIN-webfont.woff') format('woff'),
+    url('/fonts/OSP-DIN-webfont.ttf') format('truetype'),
+    url('/fonts/OSP-DIN-webfont.svg#OSPDIN') format('svg');
+    font-weight: normal;
+    font-style: normal;
 
+}
+
+body h2, body h3 {
+font-family: 'ospdin';
+color:#d30000;
+text-transform:uppercase;
+}
+body div {
+
+    font-size:16px;
+}
+body p {
+
+    font-size:16px;
 }
 .footer {
     margin-top:30px;
@@ -67,6 +86,8 @@ height:150px;
 }
 .header .logo {
     color:#d30000;
+    font-family: 'Poiret One', cursive;
+
 }
 .slide {
     height:200px;
@@ -161,4 +182,7 @@ body form input {
     width:100%;
     max-width:400px;
 
+}
+.big-img {
+    width:100%;
 }
