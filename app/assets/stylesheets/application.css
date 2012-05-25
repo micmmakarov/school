@@ -77,12 +77,15 @@ height:150px;
 }
 .header {
     margin-bottom:20px;
+    color:white;
 }
 .header .row:first-child {
-    border-bottom:4px solid #d30000;
     padding-top:15px;
 
-
+}
+.header {
+background:black;
+border-bottom:4px solid #d30000;
 }
 .header .logo {
     color:#d30000;
