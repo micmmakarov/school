@@ -37,5 +37,27 @@
 <%= controller.action_name %>
 -->
 
+<script>
+    $(document).ready(function () {
+        $(".vote").live('click',function () {
+            var v1 = 0;
+            if ($(this).hasClass("up")) {
+                v1 = 1
+            }
+            if ($(this).hasClass("down")) {
+                v1 = -1
+            }
+            id = $(this).parent().attr("data-id");
+            cls = $(this).parent().attr("data-class");
+
+            $.ajax({url:"/vote", data: {obj: cls, id: id, value:v1}});
+            $(this).parent().find(".rating").html("<div class=load></div>");
+        });
+    });
+
+</script>
+
+
+
 </body>
 </html>

@@ -1,6 +1,6 @@
 <h3>Blog</h3>
 <div class=row>
-    <% posts.each do |p| %>
+    <% posts[0..2].each do |p| %>
         <%= render :partial => "posts/single-inline", :locals => {:post => p} %>
     <% end %>
 </div>

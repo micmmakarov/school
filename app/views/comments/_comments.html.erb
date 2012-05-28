@@ -1,19 +1,48 @@
-<div class="comments_to_<%= comment.id %>" style="margin-left:20px;">
+<div class="comments_to_<%= comment.id %>" style="margin-left:40px;">
+  <hr/>
 
-<h5><%= comment.text %></h5>
-By <i class="icon-user"></i><%= comment.user.name %>
+  <% if comment.class.to_s == "Comment" %>
+     <div class="comment-body row">
+        <div class="one column phone-one">
+          <%= render :partial => "ratings/rating", :locals => {:obj => comment} %>
+        </div>
+        <div class="eleven columns phone-three">
+            <p><%= comment.text %></p>
+            <div class=row>
+              <span>
+                <small><%= comment.created_at.strftime("%A %e of %b, %Y") %> by <strong><%= comment.user.name %></strong></small>
+              </span>
 
-  <a href="#" class="add_comment" data-id="<%= comment.id %>">Add a comment</a>
 
-  <% comment.comments.each do |c| %>
+              <span class="new-comment-button">
+                  <% if user_signed_in? %>
+                    <a href="#" class="add_comment" data-id="<%= comment.id %>">Reply</a>
+                  <% else %>
+                      <a href="#" data-reveal-id="login" class="add_comment" data-id="<%= comment.id %>">Reply</a>
+                  <% end %>
+              </span>
+
+            </div>
+        </div>
+     </div>
+<% else %>
+  Leave a comment:
+      <% if user_signed_in? %>
+          <a href="#" class="add_comment" data-id="<%= comment.class.to_s.downcase+"_" if comment.class != "Comment" %><%= comment.id %>">Reply</a>
+      <% else %>
+          <a href="#" data-reveal-id="login" class="add_comment" data-id="<%= comment.class.to_s.downcase+"_" if comment.class != "Comment" %><%= comment.id %>">Reply</a>
+      <% end %>
+
+<% end %>
+
+    <%= render :partial => "comments/new_comment", :locals => {:comment => comment} %>
+
+  <% comment.comments.all(:order => "created_at DESC").each do |c| %>
 <div>
-  <%=  render :partial => "comments/comments", :locals => {:comment => c}%>
-  
+  <%=  render :partial => "comments/comments", :locals => {:comment => c} if c.text != "temp_comment" %>
+
 </div>
 <% end %>
 
 
-</div>
-<div class="add_comment_box add_comment_<%= comment.id %>">
-  <%= render :partial => "comments/new_comment", :locals => {:comment => comment} %>
 </div>

@@ -1,0 +1,49 @@
+<% if user_signed_in? %>
+    <% voted = current_user.rated?(obj) %>
+
+<% if voted %>
+    <div class="rating-block Object_<%= obj.class.to_s %>_<%= obj.id %>" data-id="<%= obj.id %>" data-class="<%= obj.class.to_s %>">
+    <% if voted==1 %>
+        <div class="up-done">
+        </div>
+    <% else %>
+          <div class="up-inactive">
+          </div>
+    <% end %>
+        <div>
+          <h5 class=rating title="total: <%=  obj.ratings.length %> hits"><%=  obj.ratings.sum(:value) %></h5>
+        </div>
+      <% if voted==-1 %>
+          <div class="down-done">
+          </div>
+    <% else %>
+        <div class="down-inactive">
+        </div>
+      <% end %>
+    </div>
+<% else %>
+        <div class="rating-block Object_<%= obj.class.to_s %>_<%= obj.id %>" data-id="<%= obj.id %>" data-class="<%= obj.class.to_s %>">
+          <div class="vote up">
+          </div>
+          <div>
+            <h5 class=rating title="total: <%=  obj.ratings.length %> hits"><%=  obj.ratings.sum(:value) %></h5>
+          </div>
+          <div class="vote down">
+          </div>
+        </div>
+
+<% end %>
+    
+
+<% else %>
+        <div class="rating-block">
+          <div class="up-inactive">
+          </div>
+          <div>
+            <h5 class=rating title="total: <%=  obj.ratings.length %> hits"><%=  obj.ratings.sum(:value) %></h5>
+          </div>
+          <div class="down-inactive">
+          </div>
+        </div>
+
+<% end %>

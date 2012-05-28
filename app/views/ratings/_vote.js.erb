@@ -1,0 +1,1 @@
+$(".Object_<%= obj.class.to_s %>_<%= obj.id %>").replaceWith("<%= escape_javascript(render :partial => "ratings/rating", :locals => {:obj => obj}) %>");

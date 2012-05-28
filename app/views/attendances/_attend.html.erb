@@ -26,5 +26,11 @@
        <% end %>
 
     </div>
+<% else %>
 
+    <% if Date.today <= lesson.time.to_date %>
+        <a href="#" class="button nice small" data-reveal-id="login">WILL ATTEND!</a>
+    <br>
+    <% else %>
+    <% end %>
 <% end %>

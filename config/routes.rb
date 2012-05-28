@@ -13,6 +13,7 @@ School::Application.routes.draw do
   get "home/index"
   get "about" => "home#about"
   get "regenerate" => "home#thumbs"
+  match "vote" => "ratings#vote"
 
   resources :lessons
 

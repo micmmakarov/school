@@ -17,11 +17,17 @@
         </div>
         
         <div class="ten columns phone-three">
-          <h5><%= link_to l.title, l %></h5>
-          <h6><%= l.description %></h6>
-          <%= l.address %>
-          <p class="small-text"><%= l.text[0..100] %>... <span class="has-tip" data-width="310" title="<%= l.text %>">Read more...</span></p>
-          <%= render :partial => "attendances/attend", :locals => {:lesson => l} %>
+          <div class=row>
+               <div class="eight columns">
+              <h5><%= link_to l.title, l %></h5>
+              <h6><%= l.description %></h6>
+              <%= l.address %>
+              <p class="small-text"><%= l.text[0..100] %>... <span class="has-tip" data-width="310" title="<%= l.text %>">Read more...</span></p>
+               </div>
+            <div class="four columns" style="text-align:right;">
+                <%= render :partial => "attendances/attend", :locals => {:lesson => l} %>
+             </div>
+          </div>
         </div>
         <hr/>
       </div>

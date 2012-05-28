@@ -32,11 +32,11 @@ text-transform:uppercase;
 }
 body div {
 
-    font-size:16px;
+    font-size:14px;
 }
 body p {
 
-    font-size:16px;
+    font-size:14px;
 }
 .footer {
     margin-top:30px;
@@ -63,6 +63,7 @@ body {
 }
 .login-form input[type=email], .login-form input[type=password] {
 font-size:30px !important;
+    font-family: Arial, sens-serif;
 }
 .login-form input[type=submit] {
 width:100%;
@@ -192,8 +193,13 @@ body form input {
     max-width:400px;
 
 }
+.comments div .add_comment_box:first-child {
+    display:block !important;
+}
+
 .big-img {
     width:100%;
+    padding-bottom:10px;
 }
 .margin-top-5 {
     margin-top:5px;
@@ -203,11 +209,11 @@ body form input {
     color: darkred;
     border-bottom: 1 dashed red;
 }
-.body a:hover {
-    color: white;
+a:hover {
+    color: white !important;
     background:darkred;
 }
-.body a:active {
+a:active {
     color: white;
     background:red;
 }
@@ -215,4 +221,79 @@ body form input {
 a.button {
     color:white;
 
+}
+
+.new-comment-button {
+    display:none;
+}
+
+
+
+/* Rating */
+.up {
+    background: url(/assets/arrows.png) no-repeat -32px 1px;
+    width:14px;
+    height:14px;
+    cursor:pointer;
+}
+.down {
+    background: url(/assets/arrows.png) no-repeat;
+    width:14px;
+    height:14px;
+    cursor:pointer;
+}
+.up-inactive {
+    background: url(/assets/arrows.png) no-repeat -32px 1px;
+    width:14px;
+    height:14px;
+
+}
+.down-inactive {
+    background: url(/assets/arrows.png) no-repeat;
+    width:14px;
+    height:14px;
+
+}
+.up-done {
+    background: url(/assets/arrows.png) no-repeat -48px 1px;
+    width:14px;
+    height:14px;
+    cursor:pointer;
+}
+.down-done {
+    background: url(/assets/arrows.png) no-repeat -16px 1px;;
+    width:14px;
+    height:14px;
+    cursor:pointer;
+}
+
+.hits {
+    font-size: 8px;
+}
+.rating {
+    padding-bottom:0px;
+    padding-top:2px;
+}
+.rating-block div {
+    margin:auto;
+    text-align:center;
+}
+
+.comment-body {
+    min-height:70px;
+    overflow:hidden;
+}
+
+.gray {
+    color:#AAAAAA;
+}
+.blog-header {
+    min-height:75px;
+}
+.load {
+    display: block;
+    height: 20px;
+    width:20px;
+    content: ' ';
+    background: url(/assets/load.gif);
 }
