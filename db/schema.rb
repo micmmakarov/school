@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120527235329) do
+ActiveRecord::Schema.define(:version => 20120529072736) do
 
   create_table "attachments", :force => true do |t|
     t.integer  "post_id"
@@ -35,9 +35,12 @@ ActiveRecord::Schema.define(:version => 20120527235329) do
     t.integer  "comment_id"
     t.integer  "lesson_id"
     t.integer  "user_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
     t.integer  "rating"
+    t.integer  "post_id"
+    t.integer  "commentable_id"
+    t.string   "commentable_type"
   end
 
   create_table "courses", :force => true do |t|
@@ -46,7 +49,10 @@ ActiveRecord::Schema.define(:version => 20120527235329) do
     t.text     "text"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.string   "slug"
   end
+
+  add_index "courses", ["slug"], :name => "index_courses_on_slug"
 
   create_table "homeworks", :force => true do |t|
     t.string   "title"
@@ -65,7 +71,10 @@ ActiveRecord::Schema.define(:version => 20120527235329) do
     t.integer  "course_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.string   "slug"
   end
+
+  add_index "lessons", ["slug"], :name => "index_lessons_on_slug"
 
   create_table "posts", :force => true do |t|
     t.string   "title"
@@ -73,7 +82,11 @@ ActiveRecord::Schema.define(:version => 20120527235329) do
     t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "rating"
+    t.string   "slug"
   end
+
+  add_index "posts", ["slug"], :name => "index_posts_on_slug"
 
   create_table "ratings", :force => true do |t|
     t.integer  "value"

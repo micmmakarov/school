@@ -288,7 +288,8 @@ a.button {
     color:#AAAAAA;
 }
 .blog-header {
-    min-height:75px;
+    /*min-height:75px;*/
+    padding-bottom:15px;
 }
 .load {
     display: block;
@@ -296,4 +297,16 @@ a.button {
     width:20px;
     content: ' ';
     background: url(/assets/load.gif);
+}
+
+dl.sub-nav dd.active a {
+    background:darkRed !important;
+}
+
+dd a:hover {
+    color:#d30000 !important;
+}
+
+.add-lesson-button {
+    float:right;
 }

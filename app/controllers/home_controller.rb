@@ -1,9 +1,16 @@
 class HomeController < ApplicationController
   def index
+    #Course.find_each(&:save)
     @courses = Course.all(:order => "created_at DESC")
     @posts = Post.all(:order => "created_at DESC", :limit => 4)
   end
   def about
+  end
+
+  def reformat
+    Post.find_each(&:save)
+    Lesson.find_each(&:save)
+    Course.find_each(&:save)
   end
 
   def thumbs
@@ -38,6 +45,8 @@ class HomeController < ApplicationController
     end
 
   end
+
+
 
 
 end

@@ -12,21 +12,68 @@
    </div>
 
    <div class=row>
-      <h6><%= @course.description %></h6>
-      <p><%= @course.text.gsub(/\n/,"<br>").html_safe %></p>
+      <h6><%= @course.description %></h6><br>
     </div>
 
 
 </div>
 
-<%= render :partial => "lessons", :locals => {:course => @course} %>
 
-<a href="#" class="green radius button" data-reveal-id="add-lesson"><i class="icon-plus-sign icon-white"></i> Add a lesson</a>
+
+<div class=row>
+    <dl class="contained tabs">
+      <dd><a href="#lessons" class="active">Lessons</a></dd>
+      <dd><a href="#comments">Comments</a></dd>
+      <dd><a href="#info">Information</a></dd>
+    </dl>
+</div>
+
+<ul class="tabs-content contained">
+  <li class="active" id="lessonsTab">
+    <%= render :partial => "lessons", :locals => {:course => @course} %>
+
+    <div class=row>
+      <a href="#" class="add-lesson-button green radius button" data-reveal-id1="add-lesson"><i class="icon-plus-sign icon-white"></i> Add a lesson</a>
+    </div>
+    <%= render :partial => "lessons/add", :locals => {:lesson => @course.lessons.build} %>
+    <br><br>
+
+  </li>
+  <li id="commentsTab">
+
+    <dl class="sub-nav comment-nav">
+      <dt>Comments filter:</dt>
+      <dd class="active"><a href="#">Date</a></dd>
+      <dd><a href="#">Rating</a></dd>
+      <dd><a href="#">Random</a></dd>
+    </dl>
+
+    <div class="comments comments_to_lesson_<%= @course.id %>" data-type="<%= @course.class.to_s.downcase %>" data-id="<%= @course.id %>">
+      <%= render :partial => "comments/comments", :locals => {:comment => @course} %>
+    </div>
+  </li>
+  <li id="infoTab">
+    <p><%= @course.text.gsub(/\n/,"<br>").html_safe %></p>
+
+  </li>
+</ul>
+
+
 
 <div id="add-lesson" class="reveal-modal">
-  <%= render :partial => "lessons/add", :locals => {:lesson => @course.lessons.build} %>
+  <% #render :partial => "lessons/add", :locals => {:lesson => @course.lessons.build} %>
   <a class="close-reveal-modal">&#215;</a>
 </div>
 
 
 <!-- <%= link_to 'Back', courses_path %> -->
+
+<script>
+  $(document).ready(function () {
+      $(".add-lesson-button").click(function (e) {
+          e.preventDefault();
+          $(".add-lesson").toggle(100);
+      });
+  });
+
+</script>

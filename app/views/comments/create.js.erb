@@ -1,10 +1,5 @@
-<% if @comment.comment.present? %>
-    <% parent_id = @comment.comment.id.to_s %>
-    <% parent = @comment.comment %>
-<% else %>
-    <% parent = @comment.lesson %>
-    <% parent_id = "lesson_" + @comment.lesson.id.to_s %>
-<% end %>
+    <% parent_id = @comment.commentable_id %>
+    <% parent = @comment.commentable %>
 
 $(".comments_to_<%= parent_id %>").replaceWith("<%= escape_javascript(render :partial => "comments/comments", :locals => {:comment => parent}) %>");
 $(".add_comment_box").hide();

@@ -57,6 +57,38 @@
 
 </script>
 
+<script>
+    <% if user_signed_in? %>
+    $(document).ready(function () {
+        $(".add_comment").live("click", function (e) {
+            e.preventDefault();
+            comment_id = $(this).attr("data-id");
+
+            var hide1=0;
+
+            if ($(".add_comment_" + comment_id).css("display") != 'none') {
+                hide1=1;
+            }
+
+            $(".add_comment_box").hide(500);
+            if (hide1==0) $(".add_comment_" + comment_id).toggle(500);
+        });
+
+
+
+    });
+    <% else %>
+
+    <% end %>
+
+
+    $(document).ready(function (){
+        $(".comment-body").live("hover", function() {
+            $(".new-comment-button").hide();
+            $(this).find(".new-comment-button").show();
+        });
+    });
+</script>
 
 
 </body>

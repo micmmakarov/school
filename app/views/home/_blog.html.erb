@@ -1,4 +1,12 @@
 <h3>Blog</h3>
+
+<dl class="sub-nav">
+  <dt>Filter:</dt>
+  <dd class="active"><a href="#">Date</a></dd>
+  <dd><a href="#">Rating</a></dd>
+  <dd><a href="#">Random</a></dd>
+</dl>
+
 <% posts.each do |p| %>
     <%= render :partial => "posts/single", :locals => {:post => p} %>
 <% end %>

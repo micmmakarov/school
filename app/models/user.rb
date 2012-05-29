@@ -61,6 +61,12 @@ class User < ActiveRecord::Base
       ddd.rating = ddd.rating.to_i + value
       ddd.save!
     end
+
+    if ddd.class.to_s.downcase=="post"
+      ddd.rating = ddd.rating.to_i + value
+      ddd.save!
+    end
+
   end
 
 end

@@ -11,7 +11,7 @@
       <%= render :partial => "ratings/rating", :locals => {:obj => post} %>
     </div>
     <div class="eleven columns phone-three">
-      <h5><%= post.title %></h5>
+      <h5><%= link_to post.title, post %></h5>
       <span class=gray><%= post.created_at.strftime("%d_%b_%Y ") %>, <%= post.user.name %></span>
     </div>
   </div>

@@ -14,10 +14,12 @@ School::Application.routes.draw do
   get "about" => "home#about"
   get "regenerate" => "home#thumbs"
   match "vote" => "ratings#vote"
+  get "reformat" => "home#reformat"
 
   resources :lessons
-
-  resources :courses
+  resources :courses do
+    resources :lessons
+  end
 
   devise_for :users
 

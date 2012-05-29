@@ -11,6 +11,7 @@ group :development do
 end
 
 gem "zurb-foundation"
+gem "friendly_id"
 
 gem "paperclip"
 gem 'aws-s3'

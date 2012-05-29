@@ -58,45 +58,20 @@
 
 </p>
 
-<% if @lesson.comments.present? %>
-    Comments
-    <div class="comments comments_to_lesson_<%= @lesson.id %>">
-    <%= render :partial => "comments/comments", :locals => {:comment => @lesson} %>
+    <hr/>
+
+      <dl class="sub-nav comment-nav">
+        <dt>Comments filter:</dt>
+        <dd class="active"><a href="#">Date</a></dd>
+        <dd><a href="#">Rating</a></dd>
+        <dd><a href="#">Random</a></dd>
+      </dl>
+
+    <div class="comments comments_to_lesson_<%= @lesson.id %>" data-type="<%= @lesson.class.to_s.downcase %>" data-id="<%= @lesson.id %>">
+        <%= render :partial => "comments/comments", :locals => {:comment => @lesson} %>
     </div>
-<% end %>
+
 
 <%= link_to 'Edit', edit_lesson_path(@lesson) %> |
 <%= link_to 'Back', lessons_path %>
 
-<script>
-<% if user_signed_in? %>
-$(document).ready(function () {
-    $(".add_comment").live("click", function (e) {
-        e.preventDefault();
-        comment_id = $(this).attr("data-id");
-
-        var hide1=0;
-
-        if ($(".add_comment_" + comment_id).css("display") != 'none') {
-            hide1=1;
-        }
-
-        $(".add_comment_box").hide(500);
-         if (hide1==0) $(".add_comment_" + comment_id).toggle(500);
-    });
-
-
-
-});
-<% else %>
-
-<% end %>
-
-
-$(document).ready(function (){
-    $(".comment-body").live("hover", function() {
-        $(".new-comment-button").hide();
-        $(this).find(".new-comment-button").show();
-    });
-});
-</script>

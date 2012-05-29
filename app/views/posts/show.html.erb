@@ -16,6 +16,11 @@
   <%= @post.content.gsub(/\n/,"<br>").html_safe %>
 </p>
 
+<div class="comments comments_to_post_<%= @post.id %>">
+  <%= render :partial => "comments/comments", :locals => {:comment => @post} %>
+</div>
+
+
 <br>
 
 

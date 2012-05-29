@@ -60,6 +60,7 @@ GEM
       multi_json (~> 1.0)
     faraday (0.8.0)
       multipart-post (~> 1.1)
+    friendly_id (4.0.5)
     hashie (1.2.0)
     heroku (2.25.0)
       launchy (>= 0.3.2)
@@ -179,6 +180,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   devise
   execjs
+  friendly_id
   heroku
   jquery-rails
   omniauth-facebook

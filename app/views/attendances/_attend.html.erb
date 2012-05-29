@@ -1,6 +1,19 @@
+<div class="attend_<%= lesson.id %>">
+<% a = lesson.attendance %>
+<% if a == 1  %>
+    <% a_title = "<b>#{a}</b> person is going" if Date.today <= lesson.time.to_date %>
+    <% a_title = "<b>#{a}</b> person was there" if Date.today > lesson.time.to_date %>
+<% elsif a==0 %>
+    <% a_title = "Nobody is going yet" if Date.today <= lesson.time.to_date %>
+    <% a_title = "Nobody was there" if Date.today > lesson.time.to_date %>
+<% else %>
+      <% a_title = "<b>#{a}</b> people are going" if Date.today <= lesson.time.to_date %>
+      <% a_title = "<b>#{a}</b> people were there" if Date.today > lesson.time.to_date %>
+<% end %>
+      <p><%= a_title.html_safe %></p>
+
 <% if user_signed_in?  %>
 
-    <div class="attend_<%= lesson.id %>">
 
       <% if Date.today <= lesson.time.to_date %>
           
@@ -9,7 +22,7 @@
                        html: { method: :post, class: '' },
                        remote: true) do |f| %>
               <% if current_user.attending?(lesson) then %>
-                  You are attending this lesson <%= f.submit "Cancel", class: "button white nice small" %>
+                  <p><span class=gray>I'm going!</span></p> <%= f.submit "Cancel", class: "button white nice small" %>
               <% else %>
                   <%= f.submit "WILL ATTEND", class: "button nice small" %>
               <% end %>
@@ -18,14 +31,13 @@
        <% else %>
 
           <% if current_user.attending?(lesson) then %>
-            You attended this lesson
+            <span class=gray>You've been there</span>
           <% else %>
-              You haven't attended this lesson
+            <span class=gray>You haven't been there</span>
         <% end %>
       
        <% end %>
 
-    </div>
 <% else %>
 
     <% if Date.today <= lesson.time.to_date %>
@@ -34,3 +46,5 @@
     <% else %>
     <% end %>
 <% end %>
+
+</div>

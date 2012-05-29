@@ -6,9 +6,9 @@
 
 
     <%= f.text_area :text, :placeholder => "your comment here", :value => "" %>
-    <%= f.hidden_field :comment_id %>
-    <%= f.hidden_field :lesson_id %>
-    <%= f.submit :class=> "small black button" %>
+    <%= f.hidden_field :commentable_id %>
+      <%= f.hidden_field :commentable_type %>
+      <%= f.submit :class=> "small black button" %>
 <% end %>
 
 <% else %>
