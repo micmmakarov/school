@@ -44,8 +44,8 @@ class LessonsController < ApplicationController
   # POST /lessons.json
   def create
     @lesson = Lesson.new(params[:lesson])
-    l.results.build(:good => true)
-    l.results.build(:good => false)
+    @lesson.results.build(:good => true)
+    @lesson.results.build(:good => false)
 
     puts "###"
     puts "###"
