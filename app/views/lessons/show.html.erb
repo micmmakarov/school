@@ -15,7 +15,7 @@
       <% if Date.today > @lesson.time.to_date %>
           <h2 style="padding-bottom:0px;color:gray;font-weight:normal;"><%= @lesson.time.strftime("%d %B") %></h2>
       <% else %>
-          <h2 style="padding-bottom:0px;color:lightgreen;font-weight:normal;"><%= @lesson.time.strftime("%d %B") %></h2>
+          <h2 style="padding-bottom:0px;color:#d30000;font-weight:normal;"><%= @lesson.time.strftime("%d %B") %></h2>
       <% end %>
       <h5 style="margin-top:-15px;color:darkgray;"><%= @lesson.time.strftime("%A") %><br></h5>
       <h4><span class="blue label"><%= @lesson.time.strftime("%I:%M%p") %></span></h4>
