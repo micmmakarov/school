@@ -11,6 +11,15 @@ class HomeController < ApplicationController
     Post.find_each(&:save)
     Lesson.find_each(&:save)
     Course.find_each(&:save)
+
+    Lesson.all.each do |l|
+      if l.results.length == 0
+        l.results.build(:good => true)
+        l.results.build(:good => false)
+        l.save
+      end
+    end
+
   end
 
   def thumbs

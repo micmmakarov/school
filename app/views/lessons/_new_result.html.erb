@@ -5,10 +5,11 @@
 <%= form_for(comment.comments.build(user_id: current_user.id, :text =>"temp_comment"), remote: true) do |f| %>
 
 
-    <%= f.text_area :text, :placeholder => "your comment here, " + current_user.name.to_s, :value => "" %>
+    <%= f.text_area :text, :placeholder => "text here, " + current_user.name.to_s, :value => "" %>
     <%= f.hidden_field :commentable_id %>
       <%= f.hidden_field :commentable_type %>
-      <%= f.submit :class=> "small black button" %>
+      <input name=result type="hidden" value="1">
+          <%= f.submit :value => "Add", :class=> "small black button" %>
 <% end %>
 
 <% else %>

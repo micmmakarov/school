@@ -4,7 +4,7 @@
 
 <% if user_signed_in? %>
 
-    <h5>My lessons:</h5>
+    <h4>My lessons:</h4><br>
 
     <% current_user.lessons.all(:order => "created_at DESC").each do |l| %>
         <% if Date.today > l.time.to_date %>

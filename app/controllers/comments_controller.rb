@@ -46,6 +46,14 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.new(params[:comment])
     @comment.user_id = current_user.id
+    @comment.rating = 0
+
+    if params[:result].present?
+      @r = "result"
+      puts "%%%"
+      puts "%%%"
+      puts "%%%"
+    end
 
     puts "###"
     puts "###"

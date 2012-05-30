@@ -4,6 +4,7 @@ class Lesson < ActiveRecord::Base
   extend FriendlyId
   friendly_id :title, use: :slugged
 
+  has_many :results
   belongs_to :course
   has_many :homeworks
   has_many :attendances

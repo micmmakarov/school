@@ -1,0 +1,13 @@
+<h3>What was good? </h3>
+<% result = lesson.results[0] %>
+<div class="comments comments_to_result_<%= result.id %>" data-type="<%= result.class.to_s.downcase %>" data-id="<%= result.id %>">
+  <%= render :partial => "lessons/results", :locals => {:comment => result} %>
+</div>
+
+<br>
+<h3>What was bad?</h3>
+
+<% result = lesson.results[1] %>
+<div class="comments comments_to_result_<%= result.id %>" data-type="<%= result.class.to_s.downcase %>" data-id="<%= result.id %>">
+  <%= render :partial => "lessons/results", :locals => {:comment => result} %>
+</div>

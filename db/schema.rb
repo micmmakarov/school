@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120529072736) do
+ActiveRecord::Schema.define(:version => 20120530010634) do
 
   create_table "attachments", :force => true do |t|
     t.integer  "post_id"
@@ -35,9 +35,9 @@ ActiveRecord::Schema.define(:version => 20120529072736) do
     t.integer  "comment_id"
     t.integer  "lesson_id"
     t.integer  "user_id"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
-    t.integer  "rating"
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
+    t.integer  "rating",           :default => 0
     t.integer  "post_id"
     t.integer  "commentable_id"
     t.string   "commentable_type"
@@ -96,6 +96,15 @@ ActiveRecord::Schema.define(:version => 20120529072736) do
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end
+
+  create_table "results", :force => true do |t|
+    t.integer  "lesson_id"
+    t.boolean  "good"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "results", ["lesson_id", "good"], :name => "index_results_on_lesson_id_and_good", :unique => true
 
   create_table "users", :force => true do |t|
     t.string   "name"

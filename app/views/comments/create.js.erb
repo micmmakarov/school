@@ -1,5 +1,10 @@
     <% parent_id = @comment.commentable_id %>
     <% parent = @comment.commentable %>
 
-$(".comments_to_<%= parent_id %>").replaceWith("<%= escape_javascript(render :partial => "comments/comments", :locals => {:comment => parent}) %>");
-$(".add_comment_box").hide();
+<% if @r.blank? %>
+    $(".comments_to_<%= parent_id %>").replaceWith("<%= escape_javascript(render :partial => "comments/comments", :locals => {:comment => parent}) %>");
+    $(".add_comment_box").hide();
+<% else %>
+    $(".comments_to_<%= parent_id %>").replaceWith("<%= escape_javascript(render :partial => "lessons/results", :locals => {:comment => parent}) %>");
+    $(".add_comment_box").hide();
+<% end %>

@@ -1,8 +1,8 @@
 <div class="comments_to_<%= comment.id %>" style="margin-left:40px;">
-  <hr/>
 
   <% if comment.class.to_s == "Comment" %>
-     <div class="comment-body row">
+      <hr/>
+      <div class="comment-body row">
         <div class="one column phone-one">
           <%= render :partial => "ratings/rating", :locals => {:obj => comment} %>
         </div>
@@ -26,11 +26,11 @@
         </div>
      </div>
 <% else %>
-  Leave a comment:
+  Leave a comment to a <%= comment.class.to_s.downcase %>:
       <% if user_signed_in? %>
-          <a href="#" class="add_comment" data-id="<%= comment.class.to_s.downcase+"_" if comment.class != "Comment" %><%= comment.id %>">Reply</a>
+          <a href="#" class="small white button add_comment" data-id="<%= comment.class.to_s.downcase+"_" if comment.class != "Comment" %><%= comment.id %>">Reply</a>
       <% else %>
-          <a href="#" data-reveal-id="login" class="add_comment" data-id="<%= comment.class.to_s.downcase+"_" if comment.class != "Comment" %><%= comment.id %>">Reply</a>
+          <a href="#" data-reveal-id="login" class="small white button add_comment" data-id="<%= comment.class.to_s.downcase+"_" if comment.class != "Comment" %><%= comment.id %>">Reply</a>
       <% end %>
 
 <% end %>

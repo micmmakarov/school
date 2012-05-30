@@ -1,0 +1,48 @@
+<div class="comments_to_<%= comment.id %>" style="margin-left:40px;">
+
+  <% if comment.class.to_s == "Comment" %>
+      <hr/>
+      <div class="comment-body row">
+        <div class="one column phone-one">
+          <%= render :partial => "ratings/rating", :locals => {:obj => comment} %>
+        </div>
+        <div class="eleven columns phone-three">
+            <p><%= comment.text %></p>
+            <div class=row>
+              <span>
+                <span class=gray><%= comment.created_at.strftime("%A %e of %b, %Y") %> by <strong><%= comment.user.name %></strong></span>
+              </span>
+
+
+              <span class="new-comment-button">
+                  <% if user_signed_in? %>
+                    <a href="#" class="add_comment small white radius button" style="display:inline;" data-id="<%= comment.id %>">Comment</a>
+                  <% else %>
+                      <a href="#" data-reveal-id="login" class="add_comment small white radius button" data-id="<%= comment.id %>">Comment</a>
+                  <% end %>
+              </span>
+
+            </div>
+        </div>
+     </div>
+<% else %>
+
+      <% if user_signed_in? %>
+          <a href="#" class="small white button add_comment" data-id="<%= comment.class.to_s.downcase+"_" if comment.class != "Comment" %><%= comment.id %>"><i class=" icon-plus-sign"></i> Add new</a>
+      <% else %>
+          <a href="#" data-reveal-id="login" class="small white button add_comment" data-id="<%= comment.class.to_s.downcase+"_" if comment.class != "Comment" %><%= comment.id %>"><i class=" icon-plus-sign"></i> Add new</a>
+      <% end %>
+
+<% end %>
+
+    <%= render :partial => "lessons/new_result", :locals => {:comment => comment} %>
+
+  <% comment.comments.all(:order => "rating DESC").each do |c| %>
+<div>
+  <%=  render :partial => "lessons/results", :locals => {:comment => c} if c.text != "temp_comment" %>
+
+</div>
+<% end %>
+
+
+</div>
