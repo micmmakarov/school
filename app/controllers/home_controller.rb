@@ -3,6 +3,7 @@ class HomeController < ApplicationController
     #Course.find_each(&:save)
     @courses = Course.all(:order => "created_at DESC")
     @posts = Post.all(:order => "created_at DESC", :limit => 4)
+    @lessons = Lesson.all(:order => "time DESC", :limit => 3)
   end
   def about
   end

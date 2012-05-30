@@ -61,6 +61,8 @@
 <ul class="tabs-content contained is_white">
   <li class="active" id="descriptionTab">
     <p><%= @lesson.text.gsub(/\n/,"<br>").html_safe %></p>
+    <br>
+    <%= link_to 'Edit', edit_lesson_path(@lesson), :class => "small black button" %>
   </li>
   <li id="commentsTab">
 
@@ -88,6 +90,5 @@
   </li>
 </ul>
 
-<%= link_to 'Edit', edit_lesson_path(@lesson) %> |
-<%= link_to 'Back', lessons_path %>
+
 

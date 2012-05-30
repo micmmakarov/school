@@ -1,0 +1,48 @@
+<h3>upcoming lessons</h3>
+
+<div class="lesson-list row">
+<% lessons.each do |l| %>
+
+      <% if Date.today <= l.time.to_date %>
+
+      <div class=row>
+        <div class="two columns phone-one">
+
+  <% if Date.today > l.time.to_date %>
+              <h2 style="padding-bottom:0px;color:gray;font-weight:normal;"><%= l.time.strftime("%d %B") %></h2>
+        <% else %>
+              <h2 style="padding-bottom:0px;color:lightgreen;font-weight:normal;"><%= l.time.strftime("%d %B") %></h2>
+        <% end %>
+          <h5 style="margin-top:-15px;color:darkgray;"><%= l.time.strftime("%A") %><br></h5>
+          <h4><span class="blue label"><%= l.time.strftime("%I:%M%p") %></span></h4>
+        </div>
+        
+        <div class="ten columns phone-three">
+          <div class=row>
+            <div class="one column phone-one">
+              <div class="blog-header row">
+                <%= render :partial => "ratings/rating", :locals => {:obj => l} %>
+              </div>
+
+            </div>
+            <div class="seven columns phone-three">
+              <h5><%= link_to l.title, course_lesson_path(l.course, l) %></h5>
+              <h6><%= l.description %></h6>
+              <%= l.address %>
+               </div>
+            <div class="four columns" style="text-align:right;">
+                <%= render :partial => "attendances/attend", :locals => {:lesson => l} %>
+             </div>
+          </div>
+          <div class=row>
+            <p class="small-text"><%= l.text[0..100] %>... <span class="has-tip" data-width="310" title="<%= l.text %>">Read more...</span></p>
+          </div>
+        </div>
+        <hr/>
+      </div>
+      <% end %>
+  <% end %>
+
+
+
+</div>
