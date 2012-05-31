@@ -27,9 +27,11 @@
 
 body h2, body h3 {
 font-family: 'ospdin';
-color:#d30000;
+/*color:#d30000;*/
+    color:black;
 text-transform:uppercase;
 }
+
 body div {
 
     font-size:14px;
