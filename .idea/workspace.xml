@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c58e55c7-c39d-41e6-9995-2d534785f3d0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/_courses.html.erb" afterPath="$PROJECT_DIR$/app/views/home/_courses.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/index.html.erb" afterPath="$PROJECT_DIR$/app/views/users/index.html.erb" />
     </list>
     <ignored path="school.iws" />
@@ -29,7 +27,7 @@
       <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/lessons/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="53" selection-start="459" selection-end="459" vertical-scroll-proportion="-8.642858">
+            <state line="17" column="102" selection-start="508" selection-end="513" vertical-scroll-proportion="-8.642858">
               <folding />
             </state>
           </provider>
@@ -101,7 +99,7 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/users/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="27" selection-start="231" selection-end="231" vertical-scroll-proportion="0.8152985">
+            <state line="11" column="40" selection-start="142" selection-end="142" vertical-scroll-proportion="0.630597">
               <folding />
             </state>
           </provider>
@@ -841,13 +839,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/lessons/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="53" selection-start="459" selection-end="459" vertical-scroll-proportion="-8.642858">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/_calendar.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="50" column="42" selection-start="1433" selection-end="1436" vertical-scroll-proportion="-6.642857">
@@ -890,9 +881,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/lessons/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="102" selection-start="508" selection-end="513" vertical-scroll-proportion="-8.642858">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/users/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="27" selection-start="231" selection-end="231" vertical-scroll-proportion="0.8152985">
+        <state line="11" column="40" selection-start="142" selection-end="142" vertical-scroll-proportion="0.630597">
           <folding />
         </state>
       </provider>
