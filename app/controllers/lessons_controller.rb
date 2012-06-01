@@ -46,6 +46,7 @@ class LessonsController < ApplicationController
     @lesson = Lesson.new(params[:lesson])
     @lesson.results.build(:good => true)
     @lesson.results.build(:good => false)
+    current_user.log(params[:action], @lesson)
 
     puts "###"
     puts "###"
@@ -66,6 +67,7 @@ class LessonsController < ApplicationController
   # PUT /lessons/1.json
   def update
     @lesson = Lesson.find(params[:id])
+    current_user.log(params[:action], @lesson)
 
     respond_to do |format|
       if @lesson.update_attributes(params[:lesson])
@@ -83,6 +85,7 @@ class LessonsController < ApplicationController
   def destroy
     @lesson = Lesson.find(params[:id])
     @lesson.destroy
+    current_user.log(params[:action], @lesson)
 
     respond_to do |format|
       format.html { redirect_to lessons_url }

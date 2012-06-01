@@ -47,6 +47,7 @@ class CommentsController < ApplicationController
     @comment = Comment.new(params[:comment])
     @comment.user_id = current_user.id
     @comment.rating = 0
+    current_user.log(params[:action], @comment)
 
     if params[:result].present?
       @r = "result"
@@ -79,6 +80,7 @@ class CommentsController < ApplicationController
   # PUT /comments/1.json
   def update
     @comment = Comment.find(params[:id])
+    current_user.log(params[:action], @comment)
 
     respond_to do |format|
       if @comment.update_attributes(params[:comment])
@@ -97,6 +99,7 @@ class CommentsController < ApplicationController
   def destroy
     @comment = Comment.find(params[:id])
     @comment.destroy if current_user = @comment.user
+    current_user.log(params[:action], @comment)
 
 
     respond_to do |format|

@@ -6,7 +6,9 @@ class HomeController < ApplicationController
     @lessons = Lesson.all(:order => "time DESC", :limit => 3)
   end
   def about
-
+  end
+  def feed
+    @feeds = Feed.all
   end
 
   def reformat

@@ -12,6 +12,7 @@ class User < ActiveRecord::Base
   has_many :comments
   has_many :attendances
   has_many :lessons, :through => :attendances
+  has_many :feeds
 
   has_attached_file :pic, :styles => { :feed => "480x400>", :medium => "500x400#",:slide => "180x260#", :thumb => "150x100#" },
                     :storage => :s3,
@@ -67,6 +68,23 @@ class User < ActiveRecord::Base
       ddd.save!
     end
 
+  end
+
+
+  def log(action, obj)
+    a = "created" if action.to_s.downcase == "create"
+    a = "updated" if action.to_s.downcase == "edited"
+    a = "destroyed" if action.to_s.downcase == "destroyed"
+    o = obj.class.to_s.downcase
+    t = ""
+    if o == "comment"
+      t = obj.text
+    else
+      t = obj.title
+    end
+
+    text = self.name.to_s + " " + a + " " + o + " (" + t + ")"
+    self.feeds.create!(:action => text)
   end
 
 end

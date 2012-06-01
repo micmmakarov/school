@@ -1,0 +1,8 @@
+<h2>The Feed</h2>
+<% @feeds.each do |f| %>
+    
+    <div>
+      <strong><%= f.created_at.strftime("%I:%M%p %d %B %A") %></strong> <%= f.action %>
+    </div>
+    
+<% end %>

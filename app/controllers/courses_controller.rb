@@ -42,6 +42,7 @@ class CoursesController < ApplicationController
   # POST /courses.json
   def create
     @course = Course.new(params[:course])
+    current_user.log(params[:action], @course)
 
     respond_to do |format|
       if @course.save
@@ -58,6 +59,7 @@ class CoursesController < ApplicationController
   # PUT /courses/1.json
   def update
     @course = Course.find(params[:id])
+    current_user.log(params[:action], @course)
 
     respond_to do |format|
       if @course.update_attributes(params[:course])
@@ -75,6 +77,7 @@ class CoursesController < ApplicationController
   def destroy
     @course = Course.find(params[:id])
     @course.destroy
+    current_user.log(params[:action], @course)
 
     respond_to do |format|
       format.html { redirect_to courses_url }

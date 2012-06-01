@@ -12,6 +12,7 @@ School::Application.routes.draw do
 
   get "home/index"
   get "about" => "home#about"
+  get "feed" => "home#feed"
   get "regenerate" => "home#thumbs"
   match "vote" => "ratings#vote"
   get "reformat" => "home#reformat"
