@@ -17,6 +17,7 @@
               <span class="new-comment-button">
                   <% if user_signed_in? %>
                     <a href="#" class="add_comment small white radius button" style="display:inline;" data-id="<%= comment.id %>">Reply</a>
+                    <%= link_to '<i class="icon-remove icon-white"></i>'.html_safe, comment, :style => "padding:5px;display:inline;", :class => "small red radius button", confirm: 'Are you sure?', method: :delete, :remote => true if comment.user == current_user %>
                   <% else %>
                       <a href="#" data-reveal-id="login" class="add_comment small white radius button" data-id="<%= comment.id %>">Reply</a>
                   <% end %>

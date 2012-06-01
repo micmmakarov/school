@@ -11,11 +11,14 @@
 <% @users.each do |user| %>
   <tr>
     <td><%= user.name %></td>
-    <td><%= user.email %></td>
+    <td><%= user.email[0..3] %>...</td>
     <td><%= user.created_at.strftime("%I:%M%p %d %B %A") %></td>
+    <td><%= "Subscribed to news" if user.subscribe %></td>
     <td><%= link_to 'Show', user %></td>
-    <td><%= link_to 'Edit', edit_user_path(user) %></td>
-    <td><%= link_to 'Destroy', user, confirm: 'Are you sure?', method: :delete %></td>
+    <% if current_user.id == user.id %>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, confirm: 'Are you sure?', method: :delete %></td>
+    <% end %>
   </tr>
 <% end %>
 </table>

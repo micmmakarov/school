@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
+    UserMailer.welcome_email.deliver
     #Course.find_each(&:save)
     @courses = Course.all(:order => "created_at DESC")
     @posts = Post.all(:order => "created_at DESC", :limit => 4)
