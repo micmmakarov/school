@@ -12,6 +12,7 @@ end
 
 gem "zurb-foundation"
 gem "friendly_id"
+gem "sendgrid"
 
 gem "paperclip"
 gem 'aws-s3'
