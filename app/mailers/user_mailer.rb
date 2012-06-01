@@ -9,4 +9,15 @@ class UserMailer < ActionMailer::Base
 
 
   end
+
+  def new_user(user)
+
+    mail( :from => "rails-school.heroku.com",
+          :to => "info1117@gmail.com",
+          :subject => "New user has registered!",
+          :text => "So user's name is " + user.name.to_s + "!"
+    )
+
+  end
+
 end

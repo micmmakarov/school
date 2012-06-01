@@ -6,7 +6,6 @@ class HomeController < ApplicationController
     @lessons = Lesson.all(:order => "time DESC", :limit => 3)
   end
   def about
-    UserMailer.welcome_email.deliver
 
   end
 

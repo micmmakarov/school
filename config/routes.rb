@@ -21,7 +21,7 @@ School::Application.routes.draw do
     resources :lessons
   end
 
-  devise_for :users
+  devise_for :users, :controllers => {:registrations => "registrations"}
 
   resources :users
   match "/attend/:id" => "attendances#attend"
