@@ -78,9 +78,9 @@ class User < ActiveRecord::Base
     o = obj.class.to_s.downcase
     t = ""
     if o == "comment"
-      t = obj.text
+      t = obj.text.to_s
     else
-      t = obj.title
+      t = obj.title.to_s
     end
 
     text = self.name.to_s + " " + a + " " + o + " (" + t + ")"
