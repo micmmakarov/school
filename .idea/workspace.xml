@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c58e55c7-c39d-41e6-9995-2d534785f3d0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/school.iml" afterPath="$PROJECT_DIR$/.idea/school.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
     </list>
@@ -38,7 +37,7 @@
       <file leaf-file-name="user.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/user.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="11" selection-start="2453" selection-end="2453" vertical-scroll-proportion="0.71453285">
+            <state line="75" column="52" selection-start="2249" selection-end="2249" vertical-scroll-proportion="0.14359862">
               <folding />
             </state>
           </provider>
@@ -774,7 +773,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/user.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="11" selection-start="2453" selection-end="2453" vertical-scroll-proportion="0.71453285">
+        <state line="75" column="52" selection-start="2249" selection-end="2249" vertical-scroll-proportion="0.14359862">
           <folding />
         </state>
       </provider>

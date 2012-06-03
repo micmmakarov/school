@@ -73,8 +73,8 @@ class User < ActiveRecord::Base
 
   def log(action, obj)
     a = "created" if action.to_s.downcase == "create"
-    a = "updated" if action.to_s.downcase == "edited"
-    a = "destroyed" if action.to_s.downcase == "destroyed"
+    a = "updated" if action.to_s.downcase == "update"
+    a = "destroyed" if action.to_s.downcase == "destroy"
     o = obj.class.to_s.downcase
     t = ""
     if o == "comment"
