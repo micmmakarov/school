@@ -31,7 +31,7 @@ end
 
 # Gems used only for assets and not required
 # in production environments by default.
-#gem "zurb-foundation"
+gem "zurb-foundation"
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -41,7 +41,7 @@ group :assets do
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platform => :ruby
 
-  gem "zurb-foundation"
+  #gem "zurb-foundation"
   gem 'uglifier', '>= 1.0.3'
 end
 
