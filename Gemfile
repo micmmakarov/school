@@ -10,7 +10,10 @@ group :development do
   gem 'sqlite3'
 end
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> bc1aaa0e03e28d0d51541937cd492f2eca41f304
 gem "friendly_id"
 gem "sendgrid"
 
@@ -32,7 +35,7 @@ end
 
 # Gems used only for assets and not required
 # in production environments by default.
-gem "zurb-foundation"
+#gem "zurb-foundation"
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -41,6 +44,10 @@ group :assets do
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platform => :ruby
+<<<<<<< HEAD
+=======
+  gem "zurb-foundation"
+>>>>>>> bc1aaa0e03e28d0d51541937cd492f2eca41f304
   gem 'uglifier', '>= 1.0.3'
 end
 
