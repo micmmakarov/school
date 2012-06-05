@@ -10,7 +10,7 @@ group :development do
   gem 'sqlite3'
 end
 
-gem "zurb-foundation"
+
 gem "friendly_id"
 gem "sendgrid"
 
@@ -38,7 +38,7 @@ group :assets do
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platform => :ruby
-
+  gem "zurb-foundation"
   gem 'uglifier', '>= 1.0.3'
 end
 
