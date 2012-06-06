@@ -7,7 +7,7 @@ class ProgressesController < ApplicationController
     @obj = "#{obj_class.to_s}".constantize.find(obj_id)
     current_user.complete!(@obj)
     respond_to do |format|
-      format.js
+      format.js {render "Progresses/complete.js"}
     end
   end
 end
