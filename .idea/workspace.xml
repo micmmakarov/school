@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c58e55c7-c39d-41e6-9995-2d534785f3d0" name="Default" comment="" />
+    <list default="true" id="c58e55c7-c39d-41e6-9995-2d534785f3d0" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/homeworks/_homeworks.html.erb" afterPath="$PROJECT_DIR$/app/views/homeworks/_homeworks.html.erb" />
+    </list>
     <ignored path="school.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,7 +36,7 @@
       <file leaf-file-name="_complete.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/progresses/_complete.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="71" selection-start="136" selection-end="136" vertical-scroll-proportion="0.0">
+            <state line="1" column="10" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -43,7 +45,7 @@
       <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/lessons/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="0" selection-start="2361" selection-end="2447" vertical-scroll-proportion="-5.428571">
+            <state line="83" column="42" selection-start="2642" selection-end="2642" vertical-scroll-proportion="-8.309524">
               <folding />
             </state>
           </provider>
@@ -67,19 +69,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_homeworks.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="_homeworks.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/homeworks/_homeworks.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="56" selection-start="632" selection-end="632" vertical-scroll-proportion="0.0">
+            <state line="15" column="33" selection-start="481" selection-end="481" vertical-scroll-proportion="0.42625898">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_homeworks_mini.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_homeworks_mini.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/homeworks/_homeworks_mini.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="53" selection-start="313" selection-end="313" vertical-scroll-proportion="0.385214">
+            <state line="3" column="6" selection-start="112" selection-end="112" vertical-scroll-proportion="-2.357143">
               <folding />
             </state>
           </provider>
@@ -138,9 +140,9 @@
         <option value="$PROJECT_DIR$/app/views/lessons/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/Progresses/_complete.html.erb" />
         <option value="$PROJECT_DIR$/app/models/homework.rb" />
-        <option value="$PROJECT_DIR$/app/views/homeworks/_homeworks.html.erb" />
         <option value="$PROJECT_DIR$/app/views/home/_sidebar.html.erb" />
         <option value="$PROJECT_DIR$/app/views/homeworks/_homeworks_mini.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/homeworks/_homeworks.html.erb" />
       </list>
     </option>
   </component>
@@ -757,13 +759,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="2" y="1" width="1278" height="758" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31162408" sideWeight="0.67021275" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31162408" sideWeight="0.67021275" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -880,23 +882,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/progresses_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="28" selection-start="243" selection-end="243" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/progresses/complete.js.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="55" selection-start="55" selection-end="55" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/progresses/_complete.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="71" selection-start="136" selection-end="136" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -915,20 +903,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/lessons/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="0" selection-start="2361" selection-end="2447" vertical-scroll-proportion="-5.428571">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/homeworks/_homeworks.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="56" selection-start="632" selection-end="632" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/_sidebar.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="23" selection-start="168" selection-end="168" vertical-scroll-proportion="-2.357143">
@@ -936,9 +910,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/progresses_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="28" selection-start="243" selection-end="243" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/homeworks/_homeworks_mini.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="53" selection-start="313" selection-end="313" vertical-scroll-proportion="0.385214">
+        <state line="3" column="6" selection-start="112" selection-end="112" vertical-scroll-proportion="-2.357143">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/progresses/_complete.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="10" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/lessons/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="42" selection-start="2642" selection-end="2642" vertical-scroll-proportion="-8.309524">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/homeworks/_homeworks.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="33" selection-start="481" selection-end="481" vertical-scroll-proportion="0.42625898">
           <folding />
         </state>
       </provider>
