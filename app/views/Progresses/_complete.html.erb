@@ -7,7 +7,7 @@
 <% if current_user.complete?(obj) %>
     <%= button_to "Undo", "/complete/" + obj.class.to_s + "/"+ obj.id.to_s, :remote => true, :method => "post", :class => "small white button" %>
 <% else %>
-    <%= button_to "Complete", "/complete/" + obj.class.to_s + "/"+ obj.id.to_s, :remote => true, :method => "post", :class => "small green button" %>
+    <%= button_to "Complete", "/complete/" + obj.class.to_s + "/"+ obj.id.to_s, :remote => true, :method => "post", :class => "small green button", :confirm => "Are you sure that you have completed this " + obj.class.to_s.downcase + "?" %>
 <% end %>
 
 

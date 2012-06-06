@@ -4,8 +4,7 @@
     <list default="true" id="c58e55c7-c39d-41e6-9995-2d534785f3d0" name="Default" comment="">
       <change type="DELETED" beforePath="C:\Users\John\Rails\school\app\views\1progresses\_complete.html.erb" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\John\Rails\school\app\views\1progresses\complete.js.erb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/homeworks/_homeworks.html.erb" afterPath="$PROJECT_DIR$/app/views/homeworks/_homeworks.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/progresses/_complete.html.erb" afterPath="$PROJECT_DIR$/app/views/progresses/_complete.html.erb" />
     </list>
     <ignored path="school.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,10 +35,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="application.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="288" column="17" selection-start="4790" selection-end="4790" vertical-scroll-proportion="0.2359882">
+            <state line="288" column="17" selection-start="4790" selection-end="4790" vertical-scroll-proportion="21.892857">
               <folding />
             </state>
           </provider>
@@ -108,10 +107,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <file leaf-file-name="_complete.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/progresses/_complete.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="2" selection-start="56" selection-end="56" vertical-scroll-proportion="-3.142857">
+            <state line="9" column="235" selection-start="595" selection-end="595" vertical-scroll-proportion="0.34653464">
               <folding />
             </state>
           </provider>
@@ -130,7 +129,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/models/lesson.rb" />
         <option value="$PROJECT_DIR$/app/views/lessons/index.html.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
@@ -146,6 +144,7 @@
         <option value="$PROJECT_DIR$/app/views/progresses/complete.js.erb" />
         <option value="$PROJECT_DIR$/app/views/homeworks/_homeworks.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
+        <option value="$PROJECT_DIR$/app/views/progresses/_complete.html.erb" />
       </list>
     </option>
   </component>
@@ -766,13 +765,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/lesson.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="298" selection-end="364" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/_sidebar.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="23" selection-start="168" selection-end="168" vertical-scroll-proportion="-2.357143">
@@ -811,13 +803,6 @@
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="2" selection-start="56" selection-end="56" vertical-scroll-proportion="-3.142857">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/progresses/complete.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="114" selection-start="114" selection-end="114" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -873,7 +858,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="288" column="17" selection-start="4790" selection-end="4790" vertical-scroll-proportion="0.2359882">
+        <state line="288" column="17" selection-start="4790" selection-end="4790" vertical-scroll-proportion="21.892857">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/progresses/complete.js.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="114" selection-start="114" selection-end="114" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/progresses/_complete.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="235" selection-start="595" selection-end="595" vertical-scroll-proportion="0.34653464">
           <folding />
         </state>
       </provider>
