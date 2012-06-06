@@ -1,0 +1,26 @@
+<% counter = 0 %>
+<% homeworks.each do |h| %>
+    
+    <% counter += 1 %>
+
+    <div class=row>
+        <div class="one column phone-one">
+          <h1 class=logo><%= counter %></h1>
+        </div>
+        <div class="eight columns phone-three">
+        <%= link_to h.lesson.course.title, h.lesson.course %> / <%= link_to h.lesson.title, h.lesson %>
+          <br>
+        <h3><%= h.title %></h3>
+        </div>
+        <div class="three columns">
+        <%= render :partial => "progresses/complete", :locals => {:obj => h} %>
+        </div>
+
+    </div>
+
+    <div class=row>
+      <strong>Description: <%= h.description %></strong><br>
+      <%= render :partial => "comments/comments", :locals => {:comment => h} %>
+    </div>
+
+<% end %>

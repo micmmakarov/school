@@ -14,6 +14,10 @@ class User < ActiveRecord::Base
   has_many :lessons, :through => :attendances
   has_many :feeds
 
+  def homeworks
+    self.lessons.map(&:homeworks).flatten
+  end
+
   has_attached_file :pic, :styles => { :feed => "480x400>", :medium => "500x400#",:slide => "180x260#", :thumb => "150x100#" },
                     :storage => :s3,
                     :bucket => 'aweek1024',
@@ -86,5 +90,21 @@ class User < ActiveRecord::Base
     text = self.name.to_s + " " + a + " " + o + " (" + t + ")"
     self.feeds.create!(:action => text)
   end
+
+  def complete?(obj)
+    if obj.progresses.find_by_user_id(self.id)
+      "Completed"
+    end
+  end
+
+
+  def complete!(obj)
+    if complete?(obj)
+      obj.progresses.find_by_user_id(self.id).destroy
+    else
+      obj.progresses.create!(:user_id => self.id)
+    end
+  end
+
 
 end

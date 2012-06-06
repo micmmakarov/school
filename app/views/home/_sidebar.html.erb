@@ -4,7 +4,7 @@
 
 <% if user_signed_in? %>
 
-    <h4>My lessons:</h4><br>
+    <h3>My lessons:</h3><br>
 
     <% current_user.lessons.all(:order => "created_at DESC").each do |l| %>
         <% if Date.today > l.time.to_date %>
@@ -18,7 +18,12 @@
         
     <% end %>
 
-<% else %>
+    <% if user_signed_in? %>
+
+        <%=  render :partial => "homeworks/homeworks_mini", :locals => {:homeworks => current_user.homeworks} %>
+    <% end %>
+
+        <% else %>
 Please register to attend classes<br>
 <a href="/users/sign_up" class="black radius button">Register</a>
 <% end %>

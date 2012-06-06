@@ -1,0 +1,13 @@
+<h3>My uncompleted homeworks:</h3>
+<% homeworks.each do |h| %>
+    <% if not current_user.complete?(h) %>
+    <div class=row>
+        <small><%= link_to h.lesson.course.title, h.lesson.course %> / <%= link_to h.lesson.title, h.lesson %></small>
+          <br>
+        <h4><a href="<%= url_for h.lesson %>#homework"><%= h.title %></a></h4>
+        </div>
+    
+    </div>
+
+    <% end %>
+<% end %>

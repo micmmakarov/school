@@ -81,7 +81,7 @@
    <%= render :partial => "lessons/goodandbad", :locals => {:lesson => @lesson} %>
   </li>
   <li id=homeworkTab>
-
+    <%=  render :partial => "homeworks/homeworks", :locals => {:homeworks => @lesson.homeworks} %>
   </li>
   <li id=attendingTab>
     <% @lesson.users.each do |u| %>

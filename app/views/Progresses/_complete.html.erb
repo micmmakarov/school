@@ -1,0 +1,16 @@
+<div class="progress-<%= obj.class.to_s + "-"+ obj.id.to_s %>">
+
+  <small><%= obj.progresses.length %> people completed this<br></small>
+
+  <% if user_signed_in? %>
+
+<% if current_user.complete?(obj) %>
+    <%= button_to "Undo", "/complete/" + obj.class.to_s + "/"+ obj.id.to_s, :remote => true, :method => "post", :class => "small white button" %>
+<% else %>
+    <%= button_to "Complete", "/complete/" + obj.class.to_s + "/"+ obj.id.to_s, :remote => true, :method => "post", :class => "small green button" %>
+<% end %>
+
+
+<% end %>
+
+</div>

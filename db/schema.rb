@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120601065339) do
+ActiveRecord::Schema.define(:version => 20120605222446) do
 
   create_table "attachments", :force => true do |t|
     t.integer  "post_id"
@@ -94,6 +94,14 @@ ActiveRecord::Schema.define(:version => 20120601065339) do
   end
 
   add_index "posts", ["slug"], :name => "index_posts_on_slug"
+
+  create_table "progresses", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "progressable_id"
+    t.string   "progressable_type"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+  end
 
   create_table "ratings", :force => true do |t|
     t.integer  "value"

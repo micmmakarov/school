@@ -26,6 +26,7 @@ School::Application.routes.draw do
 
   resources :users
   match "/attend/:id" => "attendances#attend"
+  match "/complete/:class/:id" => "progresses#complete"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
