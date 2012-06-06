@@ -1,1 +1,1 @@
-$(".progress-<%= @obj.class.to_s + "-"+ @obj.id.to_s %>").replaceWith("<%= escape_javascript(render :partial => "progresses/complete", :locals => {:obj => @obj}) %>")
+$(".progress-<%= @obj.class.to_s + "-"+ @obj.id.to_s %>").replaceWith("<%= escape_javascript(render :partial => "Progresses/complete", :locals => {:obj => @obj}) %>")
