@@ -286,8 +286,9 @@ a.button {
 }
 
 .comment-body {
-    min-height:70px;
+    min-height:65px;
     overflow:hidden;
+    padding-bottom:5px;
 }
 
 .gray {
