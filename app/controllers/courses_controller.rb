@@ -6,6 +6,7 @@ class CoursesController < ApplicationController
     @courses = Course.all
 
     respond_to do |format|
+      format.js { render "home/answer.js"}
       format.html # index.html.erb
       format.json { render json: @courses }
     end
@@ -17,6 +18,7 @@ class CoursesController < ApplicationController
     @course = Course.find(params[:id])
 
     respond_to do |format|
+      format.js { render "home/answer.js"}
       format.html # show.html.erb
       format.json { render json: @course }
     end
@@ -28,6 +30,7 @@ class CoursesController < ApplicationController
     @course = Course.new
 
     respond_to do |format|
+      format.js { render "home/answer.js"}
       format.html # new.html.erb
       format.json { render json: @course }
     end

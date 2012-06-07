@@ -4,8 +4,22 @@ class HomeController < ApplicationController
     @courses = Course.all(:order => "created_at DESC")
     @posts = Post.all(:order => "created_at DESC", :limit => 4)
     @lessons = Lesson.all(:order => "time DESC", :limit => 3)
+
+    respond_to do |format|
+      format.js { render "home/answer.js"}
+      format.html
+    end
+
+
   end
   def about
+
+    respond_to do |format|
+      format.js { render "home/answer.js"}
+      format.html
+    end
+
+
   end
   def feed
     @feeds = Feed.all

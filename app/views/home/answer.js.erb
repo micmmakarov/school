@@ -1,0 +1,16 @@
+<% if controller.controller_name=="home"&&controller.action_name=="index" %>
+    $(".slide").show();
+<% else %>
+    $(".slide").delay(50).hide(500);
+<% end %>
+
+
+
+<% data = controller.controller_name.to_s+"/"+controller.action_name.to_s %>
+<% url = request.url %>
+//$(".yield").hide();
+$(".yield").html("<div class=old-div>" + $(".yield").html() + "</div>" + "<%= escape_javascript(render :template => data) %>");
+history.pushState(null,"123", "<%= url %>");
+$(".old-div").delay(50).animate({"height": "0px"},function () {$(".old-div").remove()});
+$(".old-div").fadeOut();
+

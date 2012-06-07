@@ -8,9 +8,13 @@ class PostsController < ApplicationController
     @posts = Post.all
 
     respond_to do |format|
+        format.js { render "home/answer.js"}
       format.html # index.html.erb
       format.json { render json: @posts }
     end
+
+
+
   end
 
   # GET /posts/1

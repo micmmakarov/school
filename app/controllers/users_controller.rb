@@ -60,16 +60,27 @@ class UsersController < ApplicationController
   # PUT /users/1.json
   def update
     @user = User.find(params[:id])
+    if current_user.id != @user.id
 
-    respond_to do |format|
-      if @user.update_attributes(params[:user])
-        format.html { redirect_to @user, notice: 'User was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
+      redirect_to @user, notice: 'Something wrong with that. Guess what might be wrong:) But basically, you can not edit a user which is not you. Unless you are an admin, which your are not. If you want to be admin, give us a mail'
+      @user="Hello, Kitty!"
+
+    else
+
+
+      respond_to do |format|
+        if @user.update_attributes(params[:user])
+          format.html { redirect_to @user, notice: 'User was successfully updated.' }
+          format.json { head :no_content }
+        else
+          format.html { render action: "edit" }
+          format.json { render json: @user.errors, status: :unprocessable_entity }
+        end
       end
+
+
     end
+
   end
 
   # DELETE /users/1
