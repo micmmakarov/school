@@ -14,3 +14,30 @@ history.pushState(null,"123", "<%= url %>");
 $(".old-div").delay(50).animate({"height": "0px"},function () {$(".old-div").remove()});
 $(".old-div").fadeOut();
 
+$(document).ready(function () {
+    function activateTab1($tab) {
+        var $activeTab = $tab.closest('dl').find('a.active'),
+                contentLocation = $tab.attr("href") + 'Tab';
+
+        // Strip off the current url that IE adds
+        contentLocation = contentLocation.replace(/^.+#/, '#');
+
+        //Make Tab Active
+        $activeTab.removeClass('active');
+        $tab.addClass('active');
+
+        //Show Tab Content
+        $(contentLocation).closest('.tabs-content').children('li').hide();
+        $(contentLocation).css('display', 'block');
+    }
+
+
+$('.yield dl.tabs').each(function () {
+    //alert($('.yield dl.tabs').length);
+    //Get all tabs
+    var tabs = $(this).children('dd').children('a');
+    tabs.click(function (e) {
+        activateTab1($(this));
+    });
+});
+});
