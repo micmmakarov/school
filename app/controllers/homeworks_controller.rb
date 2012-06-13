@@ -19,7 +19,7 @@ class HomeworksController < ApplicationController
     @homework = Homework.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html { render :controller => "lessons", :action => "show"}
       format.json { render json: @homework }
     end
   end
@@ -28,8 +28,10 @@ class HomeworksController < ApplicationController
   # GET /homeworks/new.json
   def new
     @homework = Homework.new
+    @homework.lesson_id = params[:lesson_id]
 
     respond_to do |format|
+      format.js { render "home/answer.js"}
       format.html # new.html.erb
       format.json { render json: @homework }
     end
@@ -47,7 +49,7 @@ class HomeworksController < ApplicationController
 
     respond_to do |format|
       if @homework.save
-        format.html { redirect_to @homework, notice: 'Homework was successfully created.' }
+        format.html { redirect_to url_for(@homework.lesson).to_s + "#homework", notice: 'Homework was successfully created.' }
         format.json { render json: @homework, status: :created, location: @homework }
       else
         format.html { render action: "new" }

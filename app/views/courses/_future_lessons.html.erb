@@ -27,7 +27,7 @@
 
             </div>
             <div class="seven columns phone-three">
-              <h5><%= link_to l.title, course_lesson_path(l.course, l) %></h5>
+              <h5><%= link_to l.title, course_lesson_path(l.course, l), :remote => true  %></h5>
               <h6><%= l.description %></h6>
               <%= l.address %>
                </div>

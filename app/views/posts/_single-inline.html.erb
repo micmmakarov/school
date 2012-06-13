@@ -4,13 +4,13 @@
         <%= image_tag(attachment.pic.url(:feed), :class => 'big-img') %>
     <% end %>
 
-  <h5 class="margin-top-5"><%= link_to post.title, post %></h5>
+  <h5 class="margin-top-5"><%= link_to post.title, post, :remote => true %></h5>
     
     <span class="black label margin-top-5"><%= post.created_at.strftime("%d_%b_%Y ") %></span>
     <br>by <a href="#"><%= post.user.name %></a>
 
     <p class="margin-top-5">
-      <%= post.content[0..400] %>... <%= link_to "Read more...", post %>
+      <%= post.content[0..400] %>... <%= link_to "Read more...", post, :remote => true  %>
     </p>
 
 

@@ -8,7 +8,7 @@
           <h1 class=logo><%= counter %></h1>
         </div>
         <div class="eight columns phone-three">
-        <%= link_to h.lesson.course.title, h.lesson.course %> / <%= link_to h.lesson.title, h.lesson %>
+        <%= link_to h.lesson.course.title, h.lesson.course, :remote => true  %> / <%= link_to h.lesson.title, h.lesson, :remote => true  %>
           <br>
         <h3><%= h.title %></h3>
         </div>

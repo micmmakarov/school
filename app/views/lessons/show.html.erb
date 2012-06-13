@@ -82,6 +82,7 @@
   </li>
   <li id=homeworkTab>
     <%=  render :partial => "homeworks/homeworks", :locals => {:homeworks => @lesson.homeworks} %>
+    <%= link_to "New", new_homework_path(:lesson_id => @lesson.id), :class => "small black button radius", :remote => true %>
   </li>
   <li id=attendingTab>
     <% @lesson.users.each do |u| %>

@@ -11,13 +11,13 @@
       <%= render :partial => "ratings/rating", :locals => {:obj => post} %>
     </div>
     <div class="eleven columns phone-three">
-      <h5><%= link_to post.title, post %></h5>
+      <h5><%= link_to post.title, post, :remote => true  %></h5>
       <span class=gray><%= post.created_at.strftime("%d_%b_%Y ") %>, <%= post.user.name %></span>
     </div>
   </div>
 
     <p>
-      <%= post.content[0..400] %>... <%= link_to "Read more...", post %>
+      <%= post.content[0..400] %>... <%= link_to "Read more...", post, :remote => true  %>
     </p>
 
     </div>

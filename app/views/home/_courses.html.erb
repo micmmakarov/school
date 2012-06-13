@@ -4,7 +4,7 @@
 <div>
   <h3><%= link_to c.title, c, :remote => true %></h3>
   <strong><%= c.description %></strong>
-  <%= c.text[0..200].gsub(/\n/,"<br>").html_safe %>... <%= link_to "Read More...", c %>
+  <%= c.text[0..200].gsub(/\n/,"<br>").html_safe %>... <%= link_to "Read More...", c, :remote => true  %>
 
 </div>
 
