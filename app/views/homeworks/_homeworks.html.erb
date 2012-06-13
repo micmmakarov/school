@@ -8,9 +8,9 @@
           <h1 class=logo><%= counter %></h1>
         </div>
         <div class="eight columns phone-three">
-        <%= link_to h.lesson.course.title, h.lesson.course, :remote => true  %> / <%= link_to h.lesson.title, h.lesson, :remote => true  %>
-          <br>
         <h3><%= h.title %></h3>
+
+          <%= h.description %>
         </div>
         <div class="three columns">
         <%= render :partial => "Progresses/complete", :locals => {:obj => h} %>
@@ -19,7 +19,6 @@
     </div>
 
     <div class=row>
-      <strong>Description:</strong> <%= h.description %><br>
       <%= render :partial => "comments/comments", :locals => {:comment => h} %>
     </div>
      <br>

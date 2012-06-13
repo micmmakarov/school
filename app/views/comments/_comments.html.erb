@@ -27,7 +27,7 @@
         </div>
      </div>
 <% else %>
-  Leave a comment to a <%= comment.class.to_s.downcase %>:
+  <i>Leave a comment to a <%= comment.class.to_s.downcase %>:</i>
       <% if user_signed_in? %>
           <a href="#" class="small white button add_comment" data-id="<%= comment.class.to_s.downcase+"_" if comment.class != "Comment" %><%= comment.id %>">Reply</a>
       <% else %>
