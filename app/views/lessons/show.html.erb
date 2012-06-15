@@ -52,7 +52,7 @@
   <dl class="contained tabs">
     <dd><a href="#description" class="active">Description</a></dd>
     <dd><a href="#comments">Comments</a></dd>
-    <dd><a href="#results">Results</a></dd>
+    <dd><a href="#feedback">Feedback</a></dd>
     <dd><a href="#homework">Homework</a></dd>
     <dd><a href="#attending">Attendance</a></dd>
   </dl>
@@ -77,8 +77,8 @@
       <%= render :partial => "comments/comments", :locals => {:comment => @lesson} %>
     </div>
   </li>
-  <li id=resultsTab>
-   <%= render :partial => "lessons/goodandbad", :locals => {:lesson => @lesson} %>
+  <li id=feedbackTab>
+   <%= render :partial => "lessons/feedback", :locals => {:lesson => @lesson} %>
   </li>
   <li id=homeworkTab>
     <%=  render :partial => "homeworks/homeworks", :locals => {:homeworks => @lesson.homeworks} %>

@@ -1,4 +1,6 @@
-<h3>What was good? </h3>
+<div class=row>
+  <div class="six columns">
+<h3 style="color:green;">What was good? </h3>
 <% if lesson.results.length == 2 %>
     <% result = lesson.results[0] %>
     <div class="comments comments_to_result_<%= result.id %>" data-type="<%= result.class.to_s.downcase %>" data-id="<%= result.id %>">
@@ -6,7 +8,11 @@
     </div>
 <% end %>
 <br>
-<h3>What was bad?</h3>
+
+  </div>
+  <div class="six columns">
+
+  <h3 style="color:red;">What was bad?</h3>
 
 <% if lesson.results.length == 2 %>
     <% result = lesson.results[1] %>
@@ -14,3 +20,6 @@
       <%= render :partial => "lessons/results", :locals => {:comment => result} %>
     </div>
 <% end %>
+
+  </div>
+</div>

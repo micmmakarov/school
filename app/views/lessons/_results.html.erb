@@ -1,4 +1,4 @@
-<div class="comments_to_<%= comment.id %>" style="margin-left:40px;">
+<div class="comments_to_<%= comment.id %>" style="margin-left:20px;">
 
   <% if comment.class.to_s == "Comment" %>
       <hr/>
@@ -10,7 +10,7 @@
             <p><%= comment.text %></p>
             <div class=row>
               <span>
-                <span class=gray><%= comment.created_at.strftime("%A %e of %b, %Y") %> by <strong><%= comment.user.name %></strong></span>
+                <span class=gray><!-- <%= comment.created_at.strftime("%A %e of %b, %Y") %> --> by <strong><%= comment.user.name %></strong></span>
               </span>
 
 
