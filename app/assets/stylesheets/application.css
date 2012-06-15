@@ -13,6 +13,10 @@
  *= require_tree .
 */
 
+.row {
+    max-width:1200px !important;
+}
+
 @font-face {
     font-family: 'ospdin';
     src: url('/fonts/OSP-DIN-webfont.eot');
