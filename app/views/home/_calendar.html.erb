@@ -51,8 +51,12 @@
             <div style="background:<%= cycle("#EEEEEE","#BBBBCC")%>;" class="day <%= weekday %>" data-day="<%= i %>">
 
               <% if day != 0 %>
+
+
+
+
                   <% if lessons_today(year,month,day) %>
-                      <% if day >= Date.today.day %>
+                      <% if (day >= Date.today.day)&&(month >= Date.today.month) %>
                           <div class=calendar-image-wrap>
                             <img class=calendar-image src="/assets/red-queen.png"/>
                           </div>
@@ -63,8 +67,25 @@
                           </div>
                           <h3 class=with-piece><%= day %></h3>
             <% end %>
-                  <% else %>
-                      <h3><%= day %></h3>
+                  <% elsif event_today(year,month,day) %>
+
+                          <% if (day >= Date.today.day)&&(month >= Date.today.month) %>
+                              <div class=calendar-image-wrap>
+                                <img class=calendar-image src="/assets/red-p.png"/>
+                              </div>
+                              <h3 class=with-piece><%= day %></h3>
+                          <% else %>
+                              <div class=calendar-image-wrap>
+                                <img class=calendar-image src="/assets/gray-p.png"/>
+                              </div>
+                              <h3 class=with-piece><%= day %></h3>
+                          <% end %>
+                      
+                      <% else %>
+
+
+
+            <h3><%= day %></h3>
                 <% end %>
 
                   

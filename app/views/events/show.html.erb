@@ -34,6 +34,8 @@
           <%= @event.address %>
         </div>
         <div class="four columns" style="text-align:right;">
+          Go to the event's page on meetup.com<br>
+          <%= link_to "Go..", @event.url %>
           <% #render :partial => "attendances/attend", :locals => {:lesson => @event} %>
         </div>
       </div>

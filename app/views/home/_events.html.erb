@@ -1,5 +1,5 @@
 <h3 style="float:left;">Local Rails Events</h3>
-<div style="float:right;padding-top:10px;"><%=  link_to "see all..", events_path %></div>
+<div style="float:right;padding-top:10px;"><%=  link_to "see all..", events_path, :remote => true %></div>
 <div style="clear:both;"></div>
 
 <small style='display:block;margin-top:-17px'>(picked up via Meetup.com API)</small>
@@ -16,7 +16,7 @@
     <%= render :partial => "ratings/rating", :locals => {:obj => e} %>
   </div>
   <div class="eight columns phone-three">
-    <%= link_to e.title, e %><br>
+    <%= link_to e.title, e, :remote => true %><br>
     <%= e.address %>
   </div>
 </div>

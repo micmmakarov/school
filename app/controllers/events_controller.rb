@@ -7,6 +7,7 @@ class EventsController < ApplicationController
     #binding.pry
 
     respond_to do |format|
+      format.js { render "home/answer.js"}
       format.html # index.html.erb
       format.json { render json: @events }
     end
@@ -18,6 +19,7 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
 
     respond_to do |format|
+      format.js { render "home/answer.js"}
       format.html # show.html.erb
       format.json { render json: @event }
     end
