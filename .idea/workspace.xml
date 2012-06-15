@@ -4,7 +4,7 @@
     <list default="true" id="c58e55c7-c39d-41e6-9995-2d534785f3d0" name="Default" comment="">
       <change type="DELETED" beforePath="C:\Users\John\Rails\school\app\views\1progresses\_complete.html.erb" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\John\Rails\school\app\views\1progresses\complete.js.erb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/_sidebar.html.erb" afterPath="$PROJECT_DIR$/app/views/home/_sidebar.html.erb" />
     </list>
     <ignored path="school.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,19 +35,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="application.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="7" selection-start="583" selection-end="583" vertical-scroll-proportion="0.8754717">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="calendar.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/calendar.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="12" selection-start="660" selection-end="661" vertical-scroll-proportion="-8.392858">
+            <state line="16" column="7" selection-start="583" selection-end="583" vertical-scroll-proportion="-16.571428">
               <folding />
             </state>
           </provider>
@@ -56,7 +47,16 @@
       <file leaf-file-name="_calendar.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/home/_calendar.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="0" selection-start="2281" selection-end="2281" vertical-scroll-proportion="-5.214286">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_sidebar.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/home/_sidebar.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="36" selection-start="36" selection-end="36" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -129,7 +129,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/models/event.rb" />
         <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/home_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
@@ -145,6 +144,7 @@
         <option value="$PROJECT_DIR$/app/views/lessons/_results.html.erb" />
         <option value="$PROJECT_DIR$/app/views/lessons/_feedback.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
+        <option value="$PROJECT_DIR$/app/views/home/_sidebar.html.erb" />
       </list>
     </option>
   </component>
@@ -882,13 +882,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="41" selection-start="253" selection-end="253" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="0" selection-start="54" selection-end="54" vertical-scroll-proportion="-3.142857">
@@ -952,13 +945,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/_calendar.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="0" selection-start="2281" selection-end="2281" vertical-scroll-proportion="-5.214286">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/events/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="20" selection-start="1154" selection-end="1154" vertical-scroll-proportion="-7.857143">
@@ -989,7 +975,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="7" selection-start="583" selection-end="583" vertical-scroll-proportion="0.8754717">
+        <state line="16" column="7" selection-start="583" selection-end="583" vertical-scroll-proportion="-16.571428">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/_calendar.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/_sidebar.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="36" selection-start="36" selection-end="36" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>

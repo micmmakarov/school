@@ -1,4 +1,6 @@
+<% cache(:action_suffix => 'calendar') do %>
 <%= render :partial => "home/calendar", :locals =>{:year => Date.today.year, :month => Date.today.month} %>
+<% end %>
 <br>
 <br>
 
