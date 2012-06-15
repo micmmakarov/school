@@ -28,15 +28,15 @@
      </div>
 <% else %>
   <i>Leave a comment to a <%= comment.class.to_s.downcase %>:</i>
-      <% if user_signed_in? %>
-          <a href="#" class="small white button add_comment" data-id="<%= comment.class.to_s.downcase+"_" if comment.class != "Comment" %><%= comment.id %>">Reply</a>
-      <% else %>
-          <a href="#" data-reveal-id="login" class="small white button add_comment" data-id="<%= comment.class.to_s.downcase+"_" if comment.class != "Comment" %><%= comment.id %>">Reply</a>
-      <% end %>
+        <% if user_signed_in? %>
+      <a href="#" class="small white button add_comment" data-id="<%= comment.class.to_s.downcase+"_" if comment.class != "Comment" %><%= comment.id %>">Reply</a>
+  <% else %>
+      <a href="#" data-reveal-id="login" class="small white button add_comment" data-id="<%= comment.class.to_s.downcase+"_" if comment.class != "Comment" %><%= comment.id %>">Reply</a>
+  <% end %>
 
-<% end %>
+  <% end %>
 
-    <%= render :partial => "comments/new_comment", :locals => {:comment => comment} %>
+  <%= render :partial => "comments/new_comment", :locals => {:comment => comment} %>
 
   <% comment.comments.all(:order => "created_at DESC").each do |c| %>
 <div>

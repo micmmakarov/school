@@ -1,6 +1,13 @@
 <%= render :partial => "courses/future_lessons", :locals => {:lessons => @lessons} %>
+<div class=row>
+  <div class="six columns">
+    <%= render :partial => "home/courses", :locals => {:courses => @courses} %>
+  </div>
+  <div class="six columns">
+    <%= render :partial => "home/events", :locals => {:courses => @events} %>
+  </div>
 
-<%= render :partial => "home/courses", :locals => {:courses => @courses} %>
+</div>
 <br>
 <%= render :partial => "home/feed-inline", :locals => {:posts => @posts} %>
 <br>

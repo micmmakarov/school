@@ -1,0 +1,51 @@
+<%= link_to "Refresh list", "/refresh_meetup", :class => "black button radius large" %>
+ (will refresh rails-related events through Meetup.com API)
+<br><br>
+
+<%=  render :partial => "events", :locals => {:events => @events} %>
+
+<!--
+<h1>Listing events</h1>
+
+<table>
+  <tr>
+    <th>E</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Lon</th>
+    <th>Lat</th>
+    <th>Time</th>
+    <th>Url</th>
+    <th>Group</th>
+    <th>Photo</th>
+    <th>Fee</th>
+    <th>Address</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @events.each do |event| %>
+  <tr>
+    <td><%= event.e_id %></td>
+    <td><%= event.title %></td>
+    <td><%= event.description %></td>
+    <td><%= event.lon %></td>
+    <td><%= event.lat %></td>
+    <td><%= event.time %></td>
+    <td><%= event.url %></td>
+    <td><%= event.group %></td>
+    <td><%= event.photo %></td>
+    <td><%= event.fee %></td>
+    <td><%= event.address %></td>
+    <td><%= link_to 'Show', event %></td>
+    <td><%= link_to 'Edit', edit_event_path(event) %></td>
+    <td><%= link_to 'Destroy', event, :remote => true, method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Event', new_event_path %>
+-->

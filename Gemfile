@@ -8,10 +8,15 @@ gem 'rails', '3.2.3'
 
 group :development do
   gem 'sqlite3'
+  gem 'pry'
+  gem 'pry-nav'
 end
 
 gem "friendly_id"
 gem "sendgrid"
+gem "httparty"
+
+
 
 gem "paperclip"
 gem 'aws-s3'

@@ -4,6 +4,7 @@ class HomeController < ApplicationController
     @courses = Course.all(:order => "created_at DESC")
     @posts = Post.all(:order => "created_at DESC", :limit => 4)
     @lessons = Lesson.all(:order => "time DESC", :limit => 3)
+    @events = Event.all(:order => "time", :limit => 5)
 
     respond_to do |format|
       format.js { render "home/answer.js"}

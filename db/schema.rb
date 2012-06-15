@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120605222446) do
+ActiveRecord::Schema.define(:version => 20120614220243) do
 
   create_table "attachments", :force => true do |t|
     t.integer  "post_id"
@@ -53,6 +53,24 @@ ActiveRecord::Schema.define(:version => 20120605222446) do
   end
 
   add_index "courses", ["slug"], :name => "index_courses_on_slug"
+
+  create_table "events", :force => true do |t|
+    t.string   "e_id"
+    t.string   "title"
+    t.text     "description"
+    t.string   "lon"
+    t.string   "lat"
+    t.datetime "time"
+    t.string   "url"
+    t.string   "group"
+    t.string   "photo"
+    t.integer  "fee"
+    t.string   "address"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "events", ["e_id"], :name => "index_events_on_e_id"
 
   create_table "feeds", :force => true do |t|
     t.integer  "user_id"

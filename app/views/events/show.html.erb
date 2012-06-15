@@ -1,0 +1,92 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class=row>
+
+  <h4><%= @event.group %></h4>
+
+</div>
+
+<div class=panel>
+
+  <div class=row>
+    <div class="two columns phone-one">
+
+      <% if Date.today > @event.time.to_date %>
+          <h2 style="padding-bottom:0px;color:gray;font-weight:normal;"><%= @event.time.strftime("%d %B") %></h2>
+      <% else %>
+          <h2 style="padding-bottom:0px;color:#d30000;font-weight:normal;"><%= @event.time.strftime("%d %B") %></h2>
+      <% end %>
+      <h5 style="margin-top:-15px;color:darkgray;"><%= @event.time.strftime("%A") %><br></h5>
+      <h4><span class="blue label"><%= @event.time.strftime("%I:%M%p") %></span></h4>
+    </div>
+
+    <div class="ten columns phone-three">
+      <div class=row>
+        <div class="one column phone-one">
+          <div class="blog-header row">
+            <%= render :partial => "ratings/rating", :locals => {:obj => @event} %>
+          </div>
+
+        </div>
+        <div class="seven columns phone-three">
+          <h2><%= @event.title  %></h2>
+          <%= @event.address %>
+        </div>
+        <div class="four columns" style="text-align:right;">
+          <% #render :partial => "attendances/attend", :locals => {:lesson => @event} %>
+        </div>
+      </div>
+      <div class=row>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+<div class=row>
+  <dl class="contained tabs">
+    <dd><a href="#description" class="active">Description</a></dd>
+    <dd><a href="#comments">Comments</a></dd>
+    <!--<dd><a href="#results">Results</a></dd>
+    <dd><a href="#homework">Homework</a></dd>-->
+    <dd><a href="#attending">Attendance</a></dd>
+  </dl>
+</div>
+
+<ul class="tabs-content contained is_white">
+  <li class="active" id="descriptionTab">
+    <p><%= @event.description.html_safe %></p>
+    <br>
+    <% #link_to 'Edit', edit_lesson_path(@event), :class => "small black button" %>
+  </li>
+  <li id="commentsTab">
+
+    <dl class="sub-nav comment-nav">
+      <dt>Comments filter:</dt>
+      <dd class="active"><a href="#">Date</a></dd>
+      <dd><a href="#">Rating</a></dd>
+      <dd><a href="#">Random</a></dd>
+    </dl>
+
+    <div class="comments comments_to_lesson_<%= @event.id %>" data-type="<%= @event.class.to_s.downcase %>" data-id="<%= @event.id %>">
+      <%= render :partial => "comments/comments", :locals => {:comment => @event} %>
+    </div>
+  </li>
+  <li id=resultsTab>
+    <% #render :partial => "lessons/goodandbad", :locals => {:lesson => @event} %>
+  </li>
+  <li id=homeworkTab>
+    <%  #render :partial => "homeworks/homeworks", :locals => {:homeworks => @event.homeworks} %>
+    <% #link_to "New", new_homework_path(:lesson_id => @event.id), :class => "small black button radius", :remote => true %>
+  </li>
+  <li id=attendingTab>
+
+  </li>
+</ul>
+
+
+

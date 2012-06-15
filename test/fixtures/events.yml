@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  e_id: MyString
+  title: MyString
+  description: MyText
+  lon: MyString
+  lat: MyString
+  time: 2012-06-14 15:02:44
+  url: MyString
+  group: MyString
+  photo: MyString
+  fee: 1
+  address: MyString
+
+two:
+  e_id: MyString
+  title: MyString
+  description: MyText
+  lon: MyString
+  lat: MyString
+  time: 2012-06-14 15:02:44
+  url: MyString
+  group: MyString
+  photo: MyString
+  fee: 1
+  address: MyString

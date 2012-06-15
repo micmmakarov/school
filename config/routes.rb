@@ -1,5 +1,7 @@
 School::Application.routes.draw do
 
+  resources :events
+
   match "calendar/:year/:month/:direction" => "home#calendar"
 
   resources :comments
@@ -9,7 +11,7 @@ School::Application.routes.draw do
   resources :posts
 
   resources :homeworks
-
+  get "refresh_meetup" => "events#refresh"
   get "home/index"
   get "about" => "home#about"
   get "feed" => "home#feed"

@@ -1,0 +1,25 @@
+<h3 style="float:left;">Local Rails Events</h3>
+<div style="float:right;padding-top:10px;"><%=  link_to "see all..", events_path %></div>
+<div style="clear:both;"></div>
+
+<small style='display:block;margin-top:-17px'>(picked up via Meetup.com API)</small>
+<br>
+<% @events.each do |e| %>
+
+<div class="row">
+  <div class="three columns phone-one">
+  <h5><%= e.time.strftime("%a") %></h5>
+  <%= e.time.strftime("%b %e") %><br>
+  <%= e.time.strftime("%I:%M%p") %>
+  </div>
+  <div class="one column show-on-desktops">
+    <%= render :partial => "ratings/rating", :locals => {:obj => e} %>
+  </div>
+  <div class="eight columns phone-three">
+    <%= link_to e.title, e %><br>
+    <%= e.address %>
+  </div>
+</div>
+
+
+<% end %>

@@ -1,0 +1,42 @@
+<div class="lesson-list row">
+  <% events.each do |l| %>
+      <div class=row>
+        <div class="two columns phone-one">
+
+          <% if Date.today > l.time.to_date %>
+              <h2 style="padding-bottom:0px;color:gray;font-weight:normal;"><%= l.time.strftime("%d %B") %></h2>
+          <% else %>
+              <h2 style="padding-bottom:0px;color:#d30000;font-weight:normal;"><%= l.time.strftime("%d %B") %></h2>
+          <% end %>
+          <h5 style="margin-top:-15px;color:darkgray;"><%= l.time.strftime("%A") %><br></h5>
+          <h4><span class="blue label"><%= l.time.strftime("%I:%M%p") %></span></h4>
+        </div>
+
+        <div class="ten columns phone-three">
+          <div class=row>
+            <div class="one column phone-one">
+              <div class="blog-header row">
+                <%= render :partial => "ratings/rating", :locals => {:obj => l} %>
+              </div>
+
+            </div>
+            <div class="seven columns phone-three">
+              <h5></h5>
+              <h5><%= link_to l.title, l %></h5>
+              <%= l.address %>
+            </div>
+            <div class="four columns" style="text-align:right;">
+              <% #render :partial => "attendances/attend", :locals => {:lesson => l} %>
+            </div>
+          </div>
+          <div class=row>
+            <p class="small-text"><%= l.description[0..100] %>... <span class="has-tip" data-width="310" title="<%= l.description %>">Read more...</span></p>
+          </div>
+        </div>
+        <hr/>
+      </div>
+  <% end %>
+
+
+
+</div>
