@@ -1,4 +1,4 @@
-<div class="comments_to_<%= comment.id %>" style="margin-left:20px;">
+<div class="comments_to_<%= comment.id %>">
 
   <% if comment.class.to_s == "Comment" %>
       <hr/>
@@ -38,7 +38,7 @@
     <%= render :partial => "lessons/new_result", :locals => {:comment => comment} %>
 
   <% comment.comments.all(:order => "rating DESC").each do |c| %>
-<div>
+<div style="margin-left:20px;">
   <%=  render :partial => "lessons/results", :locals => {:comment => c} if c.text != "temp_comment" %>
 
 </div>
