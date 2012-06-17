@@ -110,17 +110,17 @@
             mouseenter:
                     function()
                     {
-                        $(this).find(".hidden-stuff").show();
+                        $(this).find(".hidden-stuff").stop().fadeIn(500);
                     },
             mouseleave:
                     function()
                     {
-                        $(this).find(".hidden-stuff").hide();
+                        $(this).find(".hidden-stuff").stop().fadeOut(500);
 
                     }
 
         });
-
+    $(".hidden-stuff").hide();
     });
 </script>
 

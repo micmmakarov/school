@@ -6,20 +6,18 @@
 <br>
 <% @events.each do |e| %>
 
-<div style="padding-bottom:5px;overflow:hidden;min-height:72px;">
+<div class="row">
   <div class="three columns phone-one">
     <h5><%= e.time.strftime("%b %e") %></h5>
-    <div class="hidden-stuff" style="margin-top:-5px;">
-      <%= e.time.strftime("%a") %>
-      <%= e.time.strftime("%I:%M%p") %>
-    </div>
+    <%= e.time.strftime("%a") %>
+  <%= e.time.strftime("%I:%M%p") %>
   </div>
   <div class="one column show-on-desktops">
     <%= render :partial => "ratings/rating", :locals => {:obj => e} %>
   </div>
   <div class="eight columns phone-three">
     <%= link_to e.title, e, :remote => true %><br>
-    <div><%= e.address %></div>
+    <%= e.address %>
   </div>
 </div>
 
