@@ -5,7 +5,7 @@ class HomeController < ApplicationController
     @posts = Post.all(:order => "created_at DESC", :limit => 4)
     @lessons = Lesson.all(:order => "time DESC", :limit => 3)
     @events = Event.all(:order => "time", :limit => 5)
-
+    @e_l = Event.all.length
     respond_to do |format|
       format.js { render "home/answer.js"}
       format.html
