@@ -1,10 +1,12 @@
-<h3>My uncompleted homeworks:</h3>
+<h3>My homework to complete:</h3>
+<% i = 0 %>
 <% homeworks.each do |h| %>
     <% if not current_user.complete?(h) %>
+        <% i+=1 %>
     <div class=row>
-        <small><%= link_to h.lesson.course.title, h.lesson.course %> / <%= link_to h.lesson.title, h.lesson, :remote => true  %></small>
-          <br>
-        <h4><a href="<%= url_for h.lesson %>#homework"><%= h.title %></a></h4>
+        <h5><%= i %>. <a href="<%= url_for h.lesson %>#homework"><%= h.title %></a></h5>
         </div>
     <% end %>
 <% end %>
+
+<br><br>
