@@ -51,6 +51,7 @@
 <div class=row>
   <dl class="contained tabs">
     <dd><a href="#description" class="active">Description</a></dd>
+    <dd><a href="#whiteboard">Whiteboard</a></dd>
     <dd><a href="#comments">Comments</a></dd>
     <dd><a href="#feedback">Feedback</a></dd>
     <dd><a href="#homework">Homework</a></dd>
@@ -64,6 +65,10 @@
     <br>
     <%= link_to 'Edit', edit_lesson_path(@lesson), :class => "small black button" %>
   </li>
+  <li id="whiteboardTab">
+    <iframe style="width:100%;height:600px;border:1px solid #CCCCCC;" src="http://typewith.me/p/rails-school-lesson-<%= @lesson.id %>"></iframe>
+  </li>
+
   <li id="commentsTab">
 
     <dl class="sub-nav comment-nav">
