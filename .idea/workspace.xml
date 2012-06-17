@@ -4,9 +4,9 @@
     <list default="true" id="c58e55c7-c39d-41e6-9995-2d534785f3d0" name="Default" comment="">
       <change type="DELETED" beforePath="C:\Users\John\Rails\school\app\views\1progresses\_complete.html.erb" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\John\Rails\school\app\views\1progresses\complete.js.erb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/home.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/home.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/homeworks/_homeworks_mini.html.erb" afterPath="$PROJECT_DIR$/app/views/homeworks/_homeworks_mini.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/_slider.html.erb" afterPath="$PROJECT_DIR$/app/views/home/_slider.html.erb" />
     </list>
     <ignored path="school.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,15 +55,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_events.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/events/_events.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="37" selection-start="1366" selection-end="1366" vertical-scroll-proportion="-6.285714">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
@@ -82,10 +73,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_homeworks_mini.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_homeworks_mini.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/homeworks/_homeworks_mini.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="22" selection-start="67" selection-end="67" vertical-scroll-proportion="0.06395349">
+            <state line="1" column="22" selection-start="67" selection-end="67" vertical-scroll-proportion="-0.78571427">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -103,16 +103,16 @@
       <file leaf-file-name="home.css.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/home.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="31" selection-start="225" selection-end="225" vertical-scroll-proportion="0.0">
+            <state line="8" column="14" selection-start="271" selection-end="271" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_slider.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="_slider.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/_slider.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="27" selection-start="2281" selection-end="2281" vertical-scroll-proportion="-5.5">
+            <state line="95" column="120" selection-start="3563" selection-end="3563" vertical-scroll-proportion="0.3604651">
               <folding />
             </state>
           </provider>
@@ -142,11 +142,11 @@
         <option value="$PROJECT_DIR$/app/views/homeworks/_homeworks.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/home/_sidebar.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/home/_slider.html.erb" />
         <option value="$PROJECT_DIR$/app/views/home/_events.html.erb" />
         <option value="$PROJECT_DIR$/app/views/homeworks/_homeworks_mini.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/home.css.scss" />
+        <option value="$PROJECT_DIR$/app/views/home/_slider.html.erb" />
       </list>
     </option>
   </component>
@@ -738,13 +738,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/home/_lessons.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/lessons/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="71" column="4" selection-start="2278" selection-end="2278" vertical-scroll-proportion="-4.714286">
@@ -815,13 +808,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/_slider.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="27" selection-start="2281" selection-end="2281" vertical-scroll-proportion="-5.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/_events.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="9" selection-start="558" selection-end="558" vertical-scroll-proportion="-11.0">
@@ -836,16 +822,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/home.css.scss">
+    <entry file="file://$PROJECT_DIR$/app/views/homeworks/_homeworks_mini.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="31" selection-start="225" selection-end="225" vertical-scroll-proportion="0.0">
+        <state line="1" column="22" selection-start="67" selection-end="67" vertical-scroll-proportion="-0.78571427">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/homeworks/_homeworks_mini.html.erb">
+    <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="22" selection-start="67" selection-end="67" vertical-scroll-proportion="0.06395349">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/home.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="14" selection-start="271" selection-end="271" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/_slider.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="95" column="120" selection-start="3563" selection-end="3563" vertical-scroll-proportion="0.3604651">
           <folding />
         </state>
       </provider>
