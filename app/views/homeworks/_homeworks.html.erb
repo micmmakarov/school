@@ -10,7 +10,7 @@
         <div class="eight columns phone-three">
         <h3><%= h.title %></h3>
 
-          <%= h.description %>
+          <%= h.description.html_safe %>
         </div>
         <div class="three columns">
         <%= render :partial => "Progresses/complete", :locals => {:obj => h} %>

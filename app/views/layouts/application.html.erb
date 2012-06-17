@@ -105,6 +105,22 @@
             $(".new-comment-button").hide();
             $(this).find(".new-comment-button").show();
         });
+
+        $(".with-hidden-stuff").live({
+            mouseenter:
+                    function()
+                    {
+                        $(this).find(".hidden-stuff").show();
+                    },
+            mouseleave:
+                    function()
+                    {
+                        $(this).find(".hidden-stuff").hide();
+
+                    }
+
+        });
+
     });
 </script>
 

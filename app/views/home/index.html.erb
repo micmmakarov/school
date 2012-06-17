@@ -1,9 +1,11 @@
-<%= render :partial => "courses/future_lessons", :locals => {:lessons => @lessons} %>
+<div class="row  with-hidden-stuff">
+    <%= render :partial => "courses/future_lessons", :locals => {:lessons => @lessons} %>
+</div>
 <div class=row>
-  <div class="six columns">
+  <div class="six columns with-hidden-stuff">
     <%= render :partial => "home/courses", :locals => {:courses => @courses} %>
   </div>
-  <div class="six columns">
+  <div class="six columns with-hidden-stuff">
     <%= render :partial => "home/events", :locals => {:courses => @events} %>
   </div>
 
