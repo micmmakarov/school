@@ -9,7 +9,7 @@
               <h2 style="padding-bottom:0px;color:#d30000;font-weight:normal;"><%= l.time.strftime("%d %B") %></h2>
           <% end %>
           <h5 style="margin-top:-15px;color:darkgray;"><%= l.time.strftime("%A") %><br></h5>
-          <h4><span class="blue label"><%= l.time.strftime("%I:%M%p") %></span></h4>
+          <h4><span class="blue label"><%= l.time.in_time_zone("Pacific Time (US & Canada)").strftime("%I:%M%p") %></span></h4>
         </div>
 
         <div class="ten columns phone-three">
