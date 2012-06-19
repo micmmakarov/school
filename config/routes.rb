@@ -1,5 +1,9 @@
 School::Application.routes.draw do
 
+  resources :answers
+
+  resources :questions
+
   resources :events
 
   match "calendar/:year/:month/:direction" => "home#calendar"

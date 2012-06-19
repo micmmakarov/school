@@ -14,6 +14,9 @@ class User < ActiveRecord::Base
   has_many :lessons, :through => :attendances
   has_many :feeds
 
+  has_many :questions
+  has_many :answers
+
   def homeworks
     self.lessons.map(&:homeworks).flatten
   end
@@ -107,6 +110,23 @@ class User < ActiveRecord::Base
       obj.progresses.find_by_user_id(self.id).destroy
     else
       obj.progresses.create!(:user_id => self.id)
+    end
+  end
+  def answered?(q)
+    if self.answers.find_by_question_id(q.id)
+      "answer exists!"
+    end
+  end
+
+  def question
+    questions = Question.all
+    questions.each do |q|
+      if self.answered?(q)
+      else
+        q
+        return
+      end
+
     end
   end
 
