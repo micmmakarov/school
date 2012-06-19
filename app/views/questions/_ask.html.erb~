@@ -3,7 +3,7 @@
 	<%= puts question.class %>
 	<% if question.class.to_s.downcase == "array" %>
 		<% question.each do |u| %>
-			<%= puts u.class %>
+			<%= u.class %>
 		<% end %>
 	<% end %>
 

@@ -1,0 +1,5 @@
+$(".polls").fadeOut(1500, function () {
+$(".poll_bar").replaceWith("<%= escape_javascript(render :partial => "questions/ask", :locals => {:question => @question}) %>");
+});
+$(".polls").fadeIn(100);
+
