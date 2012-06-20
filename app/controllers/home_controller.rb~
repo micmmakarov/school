@@ -26,7 +26,7 @@ class HomeController < ApplicationController
 
 	@questions.each do |q|
 		
-		hash = {}
+		answers = {}
 		q.answers.each { |a| hash[a.text] = (hash[a.text].to_i + 1).to_s }
 
 	end

@@ -18,7 +18,6 @@ School::Application.routes.draw do
   get "refresh_meetup" => "events#refresh"
   get "home/index"
   get "about" => "home#about"
-  get "charts" => "home#charts"
   get "feed" => "home#feed"
   get "regenerate" => "home#thumbs"
   match "vote" => "ratings#vote"

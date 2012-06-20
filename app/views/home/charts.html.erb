@@ -1,0 +1,45 @@
+
+<div style="background:white;">
+
+ <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+
+<% @questions.each do |g| %>
+
+	
+<h2><%= g.title %></h2>
+<p><%= g.description %></p>
+
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['value', 'people do'],
+
+		<% hash = {} %>
+		<% g.answers.each { |a| hash[a.text] = (hash[a.text].to_i + 1).to_s } %>
+		<% hash.each do |a| %>
+	          ['<%= a[0] %>',     <%= a[1] %>],
+		<% end %>
+          ['',    0]
+        ]);
+
+        var options = {
+          title: '<%= g.title %>'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div<%= g.id %>'));
+        chart.draw(data, options);
+      }
+    </script>
+
+
+<div id="chart_div<%= g.id %>" style="width: 100%; height: auto;"></div>
+
+<br>
+<hr />
+<br>
+<% end %>
+
+</div>
