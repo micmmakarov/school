@@ -1,4 +1,3 @@
-<div class="colored wrap">
 <h3 style="float:left;">Local Rails Events</h3>
 <div style="float:right;padding-top:10px;" class="hidden-stuff"><%=  link_to "see all (" + @e_l.to_s + ")", events_path, :remote => true %></div>
 <div style="clear:both;"></div>
@@ -26,4 +25,3 @@
 
 
 <% end %>
-</div>

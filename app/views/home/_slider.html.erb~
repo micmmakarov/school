@@ -10,7 +10,7 @@
         <div class="six columns">
         </div>
         <div class="six columns phone-four">
-          <h1">Wellcome to the Rails School<br>San Francisco</h1>
+          <h1 style="color:white;text-shadow:2px 2px 0px red;">Wellcome to the Rails School<br>San Francisco</h1>
         </div>
       </div>
     </div>
@@ -24,9 +24,9 @@
     <div class="six columns phone-four">
       <br>
 
-      <h1 class=slide-text>Rails is awesome</h1>
-       
-      <h4 class=slide-text>If you want to migrate to Rails<br>Take your chance</h4>
+      <h1 style="color:white;text-shadow:2px 2px 0px red;">Rails is awesome</h1>
+      <hr/>
+      <h4 style="color:white;text-shadow:2px 2px 0px red;">If you want to migrate to Rails<br>Take your chance</h4>
       <br><br><br><br><br>
     </div>
   </div>
@@ -42,9 +42,9 @@
   <div class="six columns phone-four">
     <br>
 
-    <h1 class=slide-text>Rails is awesome</h1>
-     
-    <h4 class=slide-text>If you want to migrate to Rails<br>Take your chance</h4>
+    <h1 style="color:white;text-shadow:2px 2px 0px red;">Rails is awesome</h1>
+    <hr/>
+    <h4 style="color:white;text-shadow:2px 2px 0px red;">If you want to migrate to Rails<br>Take your chance</h4>
   </div>
 </div>
 
@@ -60,9 +60,9 @@
   <div class="six columns phone-four">
     <br>
 
-    <h1 class=slide-text>Rails is awesome</h1>
-     
-    <h4 class=slide-text>If you want to migrate to Rails<br>Take your chance</h4>
+    <h1 style="color:white;text-shadow:2px 2px 0px red;">Rails is awesome</h1>
+    <hr/>
+    <h4 style="color:white;text-shadow:2px 2px 0px red;">If you want to migrate to Rails<br>Take your chance</h4>
   </div>
 </div>
 

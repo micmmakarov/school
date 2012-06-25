@@ -1,4 +1,3 @@
-<div class="colored_wrap">
 <h3>Courses</h3>
 
 <% courses.each do |c| %>
@@ -11,4 +10,3 @@
 
 
 <% end %>
-</div>

@@ -1,4 +1,4 @@
-<h3 style="float:left;">Upcoming Workshops</h3>
+<h3 style="float:left;">upcoming lessons</h3>
 <div style="float:right;padding-top:10px;" class="hidden-stuff"><%=  link_to "see all (" + lessons.length.to_s + ")", lessons_path, :remote => true %></div>
 <div style="clear:both;"></div>
 
@@ -10,7 +10,7 @@
 
       <% if Date.today <= l.time.to_date %>
 
-      <div class="row"> 
+      <div class=row>
         <div class="two columns phone-one">
 
   <% if Date.today > l.time.to_date %>
@@ -52,5 +52,3 @@
 
 
 </div>
-
-

@@ -32,7 +32,6 @@
 
 <div class=container>
 
-<div class=white-bg>
   <% if controller.controller_name=="home"&&controller.action_name=="index" %>
     <%= render "home/slider" %>
   <% end %>
@@ -47,8 +46,6 @@
        <%=  render "home/sidebar" %>
      </div>
   </div>
-
-</div> <!-- white-bg -->
 </div>
 
 <%= render "home/footer" %>
