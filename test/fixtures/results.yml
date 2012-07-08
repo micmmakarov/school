@@ -2,8 +2,8 @@
 
 one:
   lesson_id: 1
-  good: false
+  good: 1
 
 two:
-  lesson_id: 1
-  good: false
+  lesson_id: 2
+  good: 0
