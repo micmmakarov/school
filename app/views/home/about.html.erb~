@@ -2,7 +2,7 @@
   About The Project
 </h1>
 
-<iframe width="500" height="315" src="http://www.youtube.com/embed/w0WNxe_VbKY" frameborder="0" allowfullscreen style="margin:20px auto;"></iframe>
+<iframe width="500" height="315" src="http://www.youtube.com/embed/w0WNxe_VbKY" frameborder="0" allowfullscreen style="margin:20 auto;"></iframe>
 
 <h5>
   Ruby on Rails, often shortened to Rails, is an open source full-stack web application framework for the Ruby programming language. Ruby on Rails is not to be confused with Ruby, which is a general-purpose programming language, on which Ruby on Rails runs. Ruby itself existed for more than 10 years before the first release of Ruby on Rails. Rails is a full-stack framework, meaning that it gives the Web developer the full ability to gather information from the web server, talking to or querying the database, and template rendering out of the box. As a result, Rails features a routing system that is independent of the Web server.
