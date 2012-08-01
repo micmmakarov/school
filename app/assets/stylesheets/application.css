@@ -72,8 +72,10 @@ body {
    /* background:url(bg.png) !important;*/
    /* background:url(/assets/bg.jpg) !important;*/
 /* url(/assets/bg7.png) no-repeat left  70px !important, */
-    background: url(/assets/bg7.png) no-repeat left  top fixed,rgba(192,222,237,1) fixed !important;
-background-position:fixed;
+/*    background: url(/assets/bg7.png) no-repeat left  top fixed,rgba(192,222,237,1) fixed !important;*/
+        background: url(/assets/txt3.png) !important;
+
+/*background-position:fixed;*/
 
 }
 .add-lesson {
