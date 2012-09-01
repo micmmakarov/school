@@ -1,4 +1,4 @@
-<%= "We have a new lesson '#{@lesson.title}' on the #{@the_date}. Please, rsvp here: http://#{@the_link}" %>
+<%= "We have a new lesson '#{@lesson.title}' on the #{@the_date}. Please, rsvp here: http:/#{@the_link}" %>
 
 Description:
 
@@ -8,7 +8,7 @@ Description:
 
 Where: <%= "#{@lesson.address}" %>
 When <%= "#{@lesson.time.strftime('%D %R')}" %>
-RSVP: <%= "http://#{@the_link}" %>
+RSVP: <%= "http:/#{@the_link}" %>
 
 
 
