@@ -3,7 +3,9 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.3'
 
 gem 'jquery-rails'
+gem 'rb-readline'
 
+gem 'twitter'
 
 gem "friendly_id"
 gem "sendgrid"
@@ -39,8 +41,8 @@ end
 
 group :development do
   gem 'sqlite3'
-  #gem 'pry'
-  #gem 'pry-nav'
+  gem 'pry'
+  gem 'pry-nav'
 end
 
 group :production do

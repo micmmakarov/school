@@ -24,7 +24,7 @@
               <% if current_user.attending?(lesson) then %>
                   <p><span class=gray>I'm going!</span></p> <%= f.submit "Cancel", class: "button white nice small" %>
               <% else %>
-                  <%= f.submit "WILL ATTEND", class: "button nice small" %>
+                  <%= f.submit "RSVP!", class: "button nice small" %>
               <% end %>
           <% end %>
         
@@ -41,7 +41,7 @@
 <% else %>
 
     <% if Date.today <= lesson.time.to_date %>
-        <a href="#" class="button nice small" data-reveal-id="login">WILL ATTEND!</a>
+        <a href="#" class="button nice small" data-reveal-id="login">RSVP!</a>
     <br>
     <% else %>
     <% end %>

@@ -17,6 +17,7 @@ School::Application.routes.draw do
   resources :homeworks
   get "refresh_meetup" => "events#refresh"
   get "home/index"
+  get "tell_everybody/:id" => "media#tell_everybody"
   get "about" => "home#about"
   get "charts" => "home#charts"
   get "feed" => "home#feed"

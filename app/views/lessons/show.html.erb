@@ -63,7 +63,9 @@
   <li class="active" id="descriptionTab">
     <p><%= @lesson.text.gsub(/\n/,"<br>").html_safe %></p>
     <br>
-    <%= link_to 'Edit', edit_lesson_path(@lesson), :class => "small black button" %>
+    <% if user_signed_in? %>
+      <%= link_to 'Edit', edit_lesson_path(@lesson), :class => "small black button" if current_user.admin? %>
+    <% end %>
   </li>
   <li id="whiteboardTab">
     <% if user_signed_in? %>

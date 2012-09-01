@@ -7,7 +7,9 @@
       <h3><%= @course.title %></h3>
     </div>
     <div class="three columns">
-      <%= link_to 'Edit', edit_course_path(@course), :class=> "small black radius button" %>
+      <% if user_signed_in? %>
+        <%= link_to 'Edit', edit_course_path(@course), :class=> "small black radius button" if current_user.admin?%>
+      <% end %>
     </div>
    </div>
 
@@ -33,7 +35,11 @@
     <%= render :partial => "lessons", :locals => {:course => @course} %>
 
     <div class=row>
-      <a href="#" class="add-lesson-button green radius button" data-reveal-id1="add-lesson"><i class="icon-plus-sign icon-white"></i> Add a lesson</a>
+      <% if user_signed_in? %>
+        <% if current_user.admin? %>
+          <a href="#" class="add-lesson-button green radius button" data-reveal-id1="add-lesson"><i class="icon-plus-sign icon-white"></i> Add a lesson</a>
+        <% end %>
+      <% end %>
     </div>
     <%= render :partial => "lessons/add", :locals => {:lesson => @course.lessons.build} %>
     <br><br>

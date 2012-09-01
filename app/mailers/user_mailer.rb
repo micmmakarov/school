@@ -14,7 +14,7 @@ class UserMailer < ActionMailer::Base
 
     mail( :from => "rails-school.heroku.com",
           :to => "info1117@gmail.com",
-          :subject => "New user " + user.name.to_s + "has registered!",
+          :subject => "New user " + user.name.to_s + " has registered!",
           :text => "So user's name is " + user.name.to_s + "!"
     )
     if user.subscribe
@@ -25,5 +25,17 @@ class UserMailer < ActionMailer::Base
     end
 
   end
+
+   def new_lesson(lesson)
+      the_date = lesson.time.strftime('%d %B')
+
+
+      mail( :from => "rails-school.heroku.com",
+            :to => "info1117@gmail.com, michael@startupstory.ru",
+            :subject => "New lesson has been created!",
+            :text => "We got a new lesson '#{lesson.title}' on #{the_date}. Please, rsvp here: #{lessons_path}/#{lesson.slug}"
+      )
+      
+   end
 
 end
