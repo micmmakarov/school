@@ -15,7 +15,7 @@
   <div>
   <%= f.password_field :password_confirmation, :placeholder => "again password" %></div>
   <br>
-    <div><%= f.check_box :subscribe %> I want to subscribe to news and updates :) </div>
+    <div><%= f.check_box :subscribe, :checked => true %> I want to subscribe to news and updates :) </div>
   <br>
   <div><%= f.submit "Sign up", :class => "large blue nice radius button" %></div>
 <% end %>
