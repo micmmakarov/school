@@ -1,2 +1,16 @@
-<%= "We got a new lesson '#{@lesson.title}' on #{@the_date}. Please, rsvp here: #{@the_link}" %>
+<%= "We have a new lesson '#{@lesson.title}' on #{@the_date}. Please, rsvp here: http://#{@the_link}" %>
 
+Description:
+
+<%= "#{@lesson.description}" %>
+
+<%= "#{@lesson.text}" %>
+
+Where: <%= "#{@lesson.address}" %>
+When <%= "#{@lesson.time.strftime('%D %R')}" %>
+RSVP: <%= "http://#{@the_link}" %>
+
+
+
+Best regards and good luck and piece,
+Rails School @ Noisebridge :)
