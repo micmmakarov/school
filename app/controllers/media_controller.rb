@@ -9,7 +9,6 @@ class MediaController < ApplicationController
   
 
   def tell_everybody
-    binding.pry
     lesson = Lesson.find(params[:id])
     the_date = lesson.time.strftime('%d %B')
     message = "We got a new class '#{lesson.title}' on #{the_date}"
