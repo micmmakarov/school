@@ -32,10 +32,10 @@ class UserMailer < ActionMailer::Base
       
       @lesson = lesson
       @the_link = "#{lessons_path}/#{@lesson.slug}"
-
+      subscribed_users = User.where(:subscribe => true).map{|u| "#{u.email},"}.join
       mail( :from => "rails-school.heroku.com",
             :to => "railsschool.sf@gmail.com",
-            :bcc => "info1117@gmail.com, gabe@coshx.com",
+            :bcc => subscribed_users,
             :subject => "Rails School: We have a new lesson on #{lesson.time.strftime('%A')}",
       )
       
