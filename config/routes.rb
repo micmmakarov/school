@@ -1,5 +1,7 @@
 School::Application.routes.draw do
 
+  resources :notifications
+
   resources :answers
 
   resources :questions

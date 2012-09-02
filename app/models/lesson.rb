@@ -7,6 +7,7 @@ class Lesson < ActiveRecord::Base
   has_many :results
   belongs_to :course
   has_many :homeworks
+  has_many :notifications
   has_many :attendances
   has_many :users, :through => :attendances
   has_many :comments, :as => :commentable, :dependent => :destroy

@@ -1,0 +1,2 @@
+$(".send_button_<%= @lesson.id %>").replaceWith("<%= escape_javascript(render :partial => "notifications/lesson_button", :locals => {:lesson => @lesson}) %>")
+

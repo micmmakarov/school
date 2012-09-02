@@ -34,7 +34,8 @@ class UserMailer < ActionMailer::Base
       @the_link = "#{lessons_path}/#{@lesson.slug}"
 
       mail( :from => "rails-school.heroku.com",
-            :to => "info1117@gmail.com, gabe@coshx.com",
+            :to => "railsschool.sf@gmail.com",
+            :bcc => "info1117@gmail.com, gabe@coshx.com",
             :subject => "Rails School: We have a new lesson on #{lesson.time.strftime('%A')}",
       )
       

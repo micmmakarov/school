@@ -1,0 +1,13 @@
+<% if current_user.admin? %>
+  <div class='send_button_<%= lesson.id %>'>
+    <% t = lesson.notifications.size %>
+
+    <% if t > 0 %>
+      <%= link_to "Subscribers notification: Message sent #{t} times. Send again.", "/tell_everybody/#{lesson.id}", :class => 'tiny green button', :remote => true, :confirm => 'You sent already, man! Are you sure you wanna do it again?'  %>
+      
+    <% else %>
+      <%= link_to "Notify subscribers and update twitter", "/tell_everybody/#{lesson.id}", :class => 'tiny black button', :remote => true  %>
+    <% end %>
+
+  </div>
+<% end %>

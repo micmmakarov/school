@@ -34,7 +34,7 @@
             <p class="small-text"><%= l.text[0..0] %><span class="has-tip" data-width="310" title="<%= l.text %>">Description</span></p>
           </div>
           <% if user_signed_in? %>
-            <%= link_to "Tell everybody", "/tell_everybody/#{l.id}", :class => 'small black button', :remote => true if current_user.admin? %>
+            <%= render :partial => "notifications/lesson_button", :locals => {:lesson => l} %>
           <% end %>
         </div>
         <hr/>
