@@ -6,7 +6,6 @@ class HomeController < ApplicationController
     @lessons = Lesson.all(:order => "time DESC", :limit => 3)
     @events = Event.where("TIME >= ?", Time.current).all(:limit => 5)
     @e_l = Event.all.length
-    binding.pry
     respond_to do |format|
       format.js { render "home/answer.js"}
       format.html
