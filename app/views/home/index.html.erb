@@ -1,7 +1,7 @@
 <% if user_signed_in? %>
-	
+
 <div class="row polls with-hidden-stuff">
-	
+
 
 	    <%= render :partial => "questions/ask" %>
 
@@ -22,5 +22,5 @@
 
 </div>
 <br>
-<%= render :partial => "home/feed-inline", :locals => {:posts => @posts} %>
+<% render :partial => "home/feed-inline", :locals => {:posts => @posts} %>
 <br>

@@ -1,6 +1,6 @@
 <% if user_signed_in? %>
 	
-<div class="row  with-hidden-stuff">
+<div class="row polls with-hidden-stuff">
 	
 
 	    <%= render :partial => "questions/ask" %>
