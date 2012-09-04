@@ -4,8 +4,9 @@ class HomeController < ApplicationController
     @courses = Course.all(:order => "created_at DESC")
     @posts = Post.all(:order => "created_at DESC", :limit => 4)
     @lessons = Lesson.all(:order => "time DESC", :limit => 3)
-    @events = Event.all(:order => "time", :limit => 5)
+    @events = Event.where("TIME >= ?", Time.current).all(:limit => 5)
     @e_l = Event.all.length
+    binding.pry
     respond_to do |format|
       format.js { render "home/answer.js"}
       format.html
@@ -25,16 +26,16 @@ class HomeController < ApplicationController
 	@questions = Question.all
 
 	@questions.each do |q|
-		
+
 		hash = {}
 		q.answers.each { |a| hash[a.text] = (hash[a.text].to_i + 1).to_s }
 
 	end
-	
+
   end
 
 
-  
+
   def feed
     @feeds = Feed.all
   end
