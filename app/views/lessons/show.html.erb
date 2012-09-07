@@ -69,7 +69,13 @@
   </li>
   <li id="whiteboardTab">
     <% if user_signed_in? %>
-    <iframe style="width:100%;height:600px;border:1px solid #CCCCCC;" src="http://beta.etherpad.org/p/rails-school-lesson-<%= @lesson.id %>"></iframe>
+        <% if Time.current < Time.parse("1 of September 2012") %>
+           <% link = "http://typewith.me/p/" %>
+        <% else %>
+            <% link = "http://beta.etherpad.org/p/" %>
+        <% end %>
+
+    <iframe style="width:100%;height:600px;border:1px solid #CCCCCC;" src="rails-school-lesson-<%= @lesson.id %>"></iframe>
 
     <% else %>
     Please <a href="/users/sign_in" class="small black button">LOGIN</a> to access the content
