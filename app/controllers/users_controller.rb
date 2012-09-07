@@ -1,7 +1,24 @@
 class UsersController < ApplicationController
 
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, :except => :unsubscribe
 
+  def unsubscribe
+
+    @user = User.find_by_unsubscribe_link(params[:unsubscribe_link])
+
+    if @user.present?
+
+      @user.subscribe = false
+      @user.save!
+
+      respond_to do |format|
+        format.html
+        format.json
+      end
+
+    end
+
+  end
   # GET /users
   # GET /users.json
   def index
