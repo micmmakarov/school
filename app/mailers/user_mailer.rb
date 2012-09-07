@@ -27,18 +27,21 @@ class UserMailer < ActionMailer::Base
   end
 
    def new_lesson(lesson)
-      
+
       @the_date = lesson.time.strftime('%d %B')
       
       @lesson = lesson
       @the_link = "#{lessons_path}/#{@lesson.slug}"
       subscribed_users = User.where(:subscribe => true).map{|u| "#{u.email},"}.join
-      mail( :from => "rails-school.heroku.com",
-            :to => "railsschool.sf@gmail.com",
-            :bcc => subscribed_users,
-            :subject => "Rails School: We have a new lesson on #{lesson.time.strftime('%A')}",
-      )
-      
+      subscribed_users.each do |u|
+        @user = u
+        mail( :from => "rails-school.heroku.com",
+              #:to => "railsschool.sf@gmail.com",
+              :to => subscribed_users,
+              :subject => "Rails School: Lesson #{lesson.title} is added on #{lesson.time.strftime('%A')}"
+        )
+      end
+
    end
 
 end

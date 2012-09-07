@@ -13,9 +13,16 @@ class User < ActiveRecord::Base
   has_many :attendances
   has_many :lessons, :through => :attendances
   has_many :feeds
-
+  before_save :generate_unsubscribe_link
   has_many :questions
   has_many :answers
+
+  def generate_unsubscribe_link
+
+    self.unsubscribe_link = (0...30).map{65.+(rand(25)).chr}.join
+
+  end
+
 
   def homeworks
     self.lessons.map(&:homeworks).flatten

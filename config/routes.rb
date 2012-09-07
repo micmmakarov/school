@@ -26,6 +26,7 @@ School::Application.routes.draw do
   get "regenerate" => "home#thumbs"
   match "vote" => "ratings#vote"
   get "reformat" => "home#reformat"
+  get "unsubscribe/:unsubscribe_link" => "users#unsubscribe"
 
   resources :lessons
   resources :courses do
