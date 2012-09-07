@@ -75,7 +75,7 @@
             <% link = "http://beta.etherpad.org/p/" %>
         <% end %>
 
-    <iframe style="width:100%;height:600px;border:1px solid #CCCCCC;" src="rails-school-lesson-<%= @lesson.id %>"></iframe>
+    <iframe style="width:100%;height:600px;border:1px solid #CCCCCC;" src="#{lingk}rails-school-lesson-<%= @lesson.id %>"></iframe>
 
     <% else %>
     Please <a href="/users/sign_in" class="small black button">LOGIN</a> to access the content
