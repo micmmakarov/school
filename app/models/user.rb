@@ -3,11 +3,11 @@ class User < ActiveRecord::Base
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-
+         
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
   attr_accessible :name, :subscribe
-
+  
   has_many :posts
   has_many :comments
   has_many :attendances
@@ -22,7 +22,6 @@ class User < ActiveRecord::Base
     self.unsubscribe_link = (0...30).map{65.+(rand(25)).chr}.join
 
   end
-
 
   def homeworks
     self.lessons.map(&:homeworks).flatten
