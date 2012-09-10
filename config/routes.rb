@@ -32,9 +32,8 @@ School::Application.routes.draw do
   resources :courses do
     resources :lessons
   end
-
-  devise_for :users, :controllers => {:registrations => "registrations"}
-
+devise_for :users, :controllers => {:registrations => "registrations"}
+  
   resources :users
   match "/attend/:id" => "attendances#attend"
   match "/complete/:class/:id" => "progresses#complete"

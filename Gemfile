@@ -17,7 +17,8 @@ gem 'aws-sdk'
 gem 'devise'
 gem 'heroku'
 #gem "will_paginate"
-gem "omniauth-facebook"
+
+gem 'koala'
 gem "zurb-foundation"
 
 
