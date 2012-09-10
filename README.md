@@ -9,18 +9,18 @@ The idea came out of our class @ Noisebridge to have an app helping organizing t
 
 ## Main Features
 
-# Attendance (RSVP)
+### Attendance (RSVP)
 Helps to see how many people visiting next class
-# Classes announce 
+### Classes announce 
 We can post classes and subjects with descriptions, so our users can read it and RSVP. Also it sends e-mail notifications and tweets to our twitter account if we create a new class.
-# Analytics
+### Analytics
 Get data about attendance and find what subjects are more interesting to people and what less
-# Polls
+### Polls
 Polls help to research users' opinion
 /charts draws charts with the results
-# Whiteboard
+### Whiteboard
 Generated for every lessons and synced real-time, so everybody can track our lessons
-# Calendar
+### Calendar
 not only posts our events, but shows rails-related events in the city(using meetup API)
 
 
