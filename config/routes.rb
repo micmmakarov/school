@@ -32,7 +32,7 @@ School::Application.routes.draw do
   resources :courses do
     resources :lessons
   end
-devise_for :users, :controllers => {:registrations => "registrations"}
+devise_for :users, :controllers => {:registrations => "registrations", :omniauth_callbacks => "users/omniauth_callbacks" }
   
   resources :users
   match "/attend/:id" => "attendances#attend"
@@ -86,6 +86,14 @@ devise_for :users, :controllers => {:registrations => "registrations"}
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
+  match '/auth/twitter/callback' => 'sessions#create'
+  match '/auth/failure' => 'sessions#failure'
+  match 'sign_out' => 'sessions#destroy'
+  
+  match '/auth/facebook/callback' => 'sessions#create'
+  match '/auth/failure' => 'sessions#failure'
+  match 'sign_out' => 'sessions#destroy'
+  
  root :to => 'home#index'
 
   # See how all your routes lay out with "rake routes"

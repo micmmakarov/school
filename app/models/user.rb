@@ -2,11 +2,11 @@ class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable, :validatable, :omniauthable
          
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
-  attr_accessible :name, :subscribe
+  attr_accessible :name, :subscribe, :provider, :uid
   
   has_many :posts
   has_many :comments
@@ -17,6 +17,19 @@ class User < ActiveRecord::Base
   has_many :questions
   has_many :answers
 
+  def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
+    user = User.where(:provider => auth.provider, :uid => auth.uid).first
+    unless user
+      user = User.create(name: auth.extra.raw_info.name,
+                           provider: auth.provider,
+                           uid: auth.uid,
+                           email: auth.info.email,
+                           password: Devise.friendly_token[0,20]
+                           )
+    end
+    user
+  end
+  
   def generate_unsubscribe_link
 
     self.unsubscribe_link = (0...30).map{65.+(rand(25)).chr}.join
@@ -136,6 +149,7 @@ class User < ActiveRecord::Base
     end
 	return nil
   end
+  
 
 
 end

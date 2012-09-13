@@ -18,8 +18,9 @@ gem 'devise'
 gem 'heroku'
 #gem "will_paginate"
 
-gem 'koala'
+gem 'omniauth'
 gem "zurb-foundation"
+gem "omniauth-facebook"
 
 
 
