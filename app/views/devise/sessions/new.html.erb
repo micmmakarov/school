@@ -12,6 +12,7 @@
   <% end -%>
     <br />
   <div><%= f.submit "Sign in", :class => "large nice blue button" %></div>
+  <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
 <% end %>
 
 <%= render "links" %>
