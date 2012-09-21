@@ -11,6 +11,19 @@
 //$(".yield").hide();
 $(".yield").html("<div class=old-div>" + $(".yield").html() + "</div>" + "<%= escape_javascript(render :template => data) %>");
 history.pushState(null,"123", "<%= url %>");
+
+
+window.onpopstate = function(event) {
+
+    //address =  document.URL;
+    //window.location.replace(address);
+    //if (address.match("#")) {} else {window.history.back();}
+    //console.log("pathname: "+location.pathname);
+    //loadContent(location.pathname);
+};
+
+
+
 $(".old-div").delay(50).animate({"height": "0px"},function () {$(".old-div").remove()});
 $(".old-div").fadeOut();
 

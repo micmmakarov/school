@@ -15,7 +15,6 @@ gem 'aws-s3'
 gem 'aws-sdk'
 
 gem 'devise'
-gem 'heroku'
 #gem "will_paginate"
 
 gem 'omniauth'
