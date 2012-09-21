@@ -4,20 +4,25 @@
   <%= devise_error_messages! %>
 
   <div>
-  <%= f.text_field :name, :placeholder => "you name" %></div>
+  <%= f.text_field :name, :placeholder => "Full Name" %></div>
 
   <div>
   <%= f.email_field :email, :placeholder => "e-mail" %></div>
 
   <div>
-  <%= f.password_field :password, :placeholder => "password" %></div>
+  <%= f.password_field :password, :placeholder => "Password" %></div>
 
   <div>
-  <%= f.password_field :password_confirmation, :placeholder => "again password" %></div>
+  <%= f.password_field :password_confirmation, :placeholder => "Confirm Password" %></div>
   <br>
     <div><%= f.check_box :subscribe, :checked => true %> I want to subscribe to news and updates :) </div>
   <br>
   <div><%= f.submit "Sign up", :class => "large blue nice radius button" %></div>
+  <div><%- if devise_mapping.omniauthable? %>
+    <%- resource_class.omniauth_providers.each do |provider| %>
+      <%= link_to "Sign in with #{provider.to_s.titleize}", omniauth_authorize_path(resource_name, provider) %><br />
+    <% end -%>
+  <% end -%></div>
 <% end %>
 
 <%= render "links" %>
