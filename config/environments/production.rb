@@ -1,3 +1,5 @@
+config.action_mailer.default_url_options = { :host => 'rails-school.heroku.com' }
+
 ActionMailer::Base.smtp_settings = {
     :address        => 'smtp.sendgrid.net',
     :port           => '587',
