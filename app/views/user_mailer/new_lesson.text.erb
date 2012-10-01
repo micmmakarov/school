@@ -4,9 +4,9 @@
 
 Description:
 
-<%= "#{@lesson.description}" %>
+<%= "#{@lesson.description.gsub!(/(<[^>]*>)|\n|\t/s) {" "}}" %>
 
-<%= "#{@lesson.text}" %>
+<%= "#{@lesson.text.gsub!(/(<[^>]*>)|\n|\t/s) {" "}}" %>
 
 Where: <%= "#{@lesson.address}" %>
 When <%= "#{@lesson.time.strftime('%D %R')}" %>
